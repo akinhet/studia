@@ -1,0 +1,14 @@
+STDOUT:
+BFS order: 1 5 4 2 6 8 3 7 
+BFS tree:
+1 5
+1 4
+1 2
+5 6
+5 8
+4 3
+6 7
+
+
+STDERR:
+

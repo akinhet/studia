@@ -1,0 +1,15 @@
+STDOUT:
+DFS order: 1 5 6 9 8 7 4 3 2 
+DFS tree:
+1 5
+5 6
+6 9
+9 8
+9 7
+7 4
+1 3
+1 2
+
+
+STDERR:
+

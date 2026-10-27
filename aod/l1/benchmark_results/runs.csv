@@ -1,0 +1,331 @@
+task,algorithm,test_file,graph_type,vertices,edges,repeat,status,returncode,wall_ms,result,output_file
+z1,bfs,z1/g1.txt,D,6,9,1,ok,0,1.90498,,outputs/z1__bfs__z1__g1.txt__run1.txt
+z1,bfs,z1/g1.txt,D,6,9,2,ok,0,1.051851,,outputs/z1__bfs__z1__g1.txt__run2.txt
+z1,bfs,z1/g1.txt,D,6,9,3,ok,0,0.80578,,outputs/z1__bfs__z1__g1.txt__run3.txt
+z1,bfs,z1/g1.txt,D,6,9,4,ok,0,0.985497,,outputs/z1__bfs__z1__g1.txt__run4.txt
+z1,bfs,z1/g1.txt,D,6,9,5,ok,0,0.958777,,outputs/z1__bfs__z1__g1.txt__run5.txt
+z1,bfs,z1/g2.txt,D,8,12,1,ok,0,1.357745,,outputs/z1__bfs__z1__g2.txt__run1.txt
+z1,bfs,z1/g2.txt,D,8,12,2,ok,0,0.838291,,outputs/z1__bfs__z1__g2.txt__run2.txt
+z1,bfs,z1/g2.txt,D,8,12,3,ok,0,0.977272,,outputs/z1__bfs__z1__g2.txt__run3.txt
+z1,bfs,z1/g2.txt,D,8,12,4,ok,0,0.725279,,outputs/z1__bfs__z1__g2.txt__run4.txt
+z1,bfs,z1/g2.txt,D,8,12,5,ok,0,0.756247,,outputs/z1__bfs__z1__g2.txt__run5.txt
+z1,bfs,z1/g3.txt,D,9,17,1,ok,0,0.881502,,outputs/z1__bfs__z1__g3.txt__run1.txt
+z1,bfs,z1/g3.txt,D,9,17,2,ok,0,0.638256,,outputs/z1__bfs__z1__g3.txt__run2.txt
+z1,bfs,z1/g3.txt,D,9,17,3,ok,0,1.368455,,outputs/z1__bfs__z1__g3.txt__run3.txt
+z1,bfs,z1/g3.txt,D,9,17,4,ok,0,0.67227,,outputs/z1__bfs__z1__g3.txt__run4.txt
+z1,bfs,z1/g3.txt,D,9,17,5,ok,0,0.822922,,outputs/z1__bfs__z1__g3.txt__run5.txt
+z1,bfs,z1/g4.txt,U,6,9,1,ok,0,0.588252,,outputs/z1__bfs__z1__g4.txt__run1.txt
+z1,bfs,z1/g4.txt,U,6,9,2,ok,0,0.695834,,outputs/z1__bfs__z1__g4.txt__run2.txt
+z1,bfs,z1/g4.txt,U,6,9,3,ok,0,0.673533,,outputs/z1__bfs__z1__g4.txt__run3.txt
+z1,bfs,z1/g4.txt,U,6,9,4,ok,0,1.35523,,outputs/z1__bfs__z1__g4.txt__run4.txt
+z1,bfs,z1/g4.txt,U,6,9,5,ok,0,0.636002,,outputs/z1__bfs__z1__g4.txt__run5.txt
+z1,bfs,z1/g5.txt,U,8,12,1,ok,0,0.737272,,outputs/z1__bfs__z1__g5.txt__run1.txt
+z1,bfs,z1/g5.txt,U,8,12,2,ok,0,0.838332,,outputs/z1__bfs__z1__g5.txt__run2.txt
+z1,bfs,z1/g5.txt,U,8,12,3,ok,0,0.838151,,outputs/z1__bfs__z1__g5.txt__run3.txt
+z1,bfs,z1/g5.txt,U,8,12,4,ok,0,0.70985,,outputs/z1__bfs__z1__g5.txt__run4.txt
+z1,bfs,z1/g5.txt,U,8,12,5,ok,0,0.794168,,outputs/z1__bfs__z1__g5.txt__run5.txt
+z1,bfs,z1/g6.txt,U,9,17,1,ok,0,0.657573,,outputs/z1__bfs__z1__g6.txt__run1.txt
+z1,bfs,z1/g6.txt,U,9,17,2,ok,0,0.874659,,outputs/z1__bfs__z1__g6.txt__run2.txt
+z1,bfs,z1/g6.txt,U,9,17,3,ok,0,0.691416,,outputs/z1__bfs__z1__g6.txt__run3.txt
+z1,bfs,z1/g6.txt,U,9,17,4,ok,0,0.76327,,outputs/z1__bfs__z1__g6.txt__run4.txt
+z1,bfs,z1/g6.txt,U,9,17,5,ok,0,0.653956,,outputs/z1__bfs__z1__g6.txt__run5.txt
+z1,bfs,z1/g7.txt,D,50,100,1,ok,0,0.641042,,outputs/z1__bfs__z1__g7.txt__run1.txt
+z1,bfs,z1/g7.txt,D,50,100,2,ok,0,0.838482,,outputs/z1__bfs__z1__g7.txt__run2.txt
+z1,bfs,z1/g7.txt,D,50,100,3,ok,0,0.686788,,outputs/z1__bfs__z1__g7.txt__run3.txt
+z1,bfs,z1/g7.txt,D,50,100,4,ok,0,0.747852,,outputs/z1__bfs__z1__g7.txt__run4.txt
+z1,bfs,z1/g7.txt,D,50,100,5,ok,0,0.695513,,outputs/z1__bfs__z1__g7.txt__run5.txt
+z1,bfs,z1/g8.txt,U,50,100,1,ok,0,0.858369,,outputs/z1__bfs__z1__g8.txt__run1.txt
+z1,bfs,z1/g8.txt,U,50,100,2,ok,0,0.695814,,outputs/z1__bfs__z1__g8.txt__run2.txt
+z1,bfs,z1/g8.txt,U,50,100,3,ok,0,0.750988,,outputs/z1__bfs__z1__g8.txt__run3.txt
+z1,bfs,z1/g8.txt,U,50,100,4,ok,0,0.766918,,outputs/z1__bfs__z1__g8.txt__run4.txt
+z1,bfs,z1/g8.txt,U,50,100,5,ok,0,0.788859,,outputs/z1__bfs__z1__g8.txt__run5.txt
+z1,dfs,z1/g1.txt,D,6,9,1,ok,0,0.727584,,outputs/z1__dfs__z1__g1.txt__run1.txt
+z1,dfs,z1/g1.txt,D,6,9,2,ok,0,0.671499,,outputs/z1__dfs__z1__g1.txt__run2.txt
+z1,dfs,z1/g1.txt,D,6,9,3,ok,0,0.814967,,outputs/z1__dfs__z1__g1.txt__run3.txt
+z1,dfs,z1/g1.txt,D,6,9,4,ok,0,0.766627,,outputs/z1__dfs__z1__g1.txt__run4.txt
+z1,dfs,z1/g1.txt,D,6,9,5,ok,0,0.740809,,outputs/z1__dfs__z1__g1.txt__run5.txt
+z1,dfs,z1/g2.txt,D,8,12,1,ok,0,0.676979,,outputs/z1__dfs__z1__g2.txt__run1.txt
+z1,dfs,z1/g2.txt,D,8,12,2,ok,0,0.636223,,outputs/z1__dfs__z1__g2.txt__run2.txt
+z1,dfs,z1/g2.txt,D,8,12,3,ok,0,0.623168,,outputs/z1__dfs__z1__g2.txt__run3.txt
+z1,dfs,z1/g2.txt,D,8,12,4,ok,0,0.641382,,outputs/z1__dfs__z1__g2.txt__run4.txt
+z1,dfs,z1/g2.txt,D,8,12,5,ok,0,0.823092,,outputs/z1__dfs__z1__g2.txt__run5.txt
+z1,dfs,z1/g3.txt,D,9,17,1,ok,0,0.716012,,outputs/z1__dfs__z1__g3.txt__run1.txt
+z1,dfs,z1/g3.txt,D,9,17,2,ok,0,0.738985,,outputs/z1__dfs__z1__g3.txt__run2.txt
+z1,dfs,z1/g3.txt,D,9,17,3,ok,0,0.672711,,outputs/z1__dfs__z1__g3.txt__run3.txt
+z1,dfs,z1/g3.txt,D,9,17,4,ok,0,0.721853,,outputs/z1__dfs__z1__g3.txt__run4.txt
+z1,dfs,z1/g3.txt,D,9,17,5,ok,0,0.731511,,outputs/z1__dfs__z1__g3.txt__run5.txt
+z1,dfs,z1/g4.txt,U,6,9,1,ok,0,0.723456,,outputs/z1__dfs__z1__g4.txt__run1.txt
+z1,dfs,z1/g4.txt,U,6,9,2,ok,0,0.719348,,outputs/z1__dfs__z1__g4.txt__run2.txt
+z1,dfs,z1/g4.txt,U,6,9,3,ok,0,0.70435,,outputs/z1__dfs__z1__g4.txt__run3.txt
+z1,dfs,z1/g4.txt,U,6,9,4,ok,0,0.828353,,outputs/z1__dfs__z1__g4.txt__run4.txt
+z1,dfs,z1/g4.txt,U,6,9,5,ok,0,0.798647,,outputs/z1__dfs__z1__g4.txt__run5.txt
+z1,dfs,z1/g5.txt,U,8,12,1,ok,0,0.866815,,outputs/z1__dfs__z1__g5.txt__run1.txt
+z1,dfs,z1/g5.txt,U,8,12,2,ok,0,0.7843,,outputs/z1__dfs__z1__g5.txt__run2.txt
+z1,dfs,z1/g5.txt,U,8,12,3,ok,0,0.705953,,outputs/z1__dfs__z1__g5.txt__run3.txt
+z1,dfs,z1/g5.txt,U,8,12,4,ok,0,0.749575,,outputs/z1__dfs__z1__g5.txt__run4.txt
+z1,dfs,z1/g5.txt,U,8,12,5,ok,0,0.683992,,outputs/z1__dfs__z1__g5.txt__run5.txt
+z1,dfs,z1/g6.txt,U,9,17,1,ok,0,0.732263,,outputs/z1__dfs__z1__g6.txt__run1.txt
+z1,dfs,z1/g6.txt,U,9,17,2,ok,0,0.740047,,outputs/z1__dfs__z1__g6.txt__run2.txt
+z1,dfs,z1/g6.txt,U,9,17,3,ok,0,0.685866,,outputs/z1__dfs__z1__g6.txt__run3.txt
+z1,dfs,z1/g6.txt,U,9,17,4,ok,0,0.66146,,outputs/z1__dfs__z1__g6.txt__run4.txt
+z1,dfs,z1/g6.txt,U,9,17,5,ok,0,0.70949,,outputs/z1__dfs__z1__g6.txt__run5.txt
+z1,dfs,z1/g7.txt,D,50,100,1,ok,0,0.735208,,outputs/z1__dfs__z1__g7.txt__run1.txt
+z1,dfs,z1/g7.txt,D,50,100,2,ok,0,0.721542,,outputs/z1__dfs__z1__g7.txt__run2.txt
+z1,dfs,z1/g7.txt,D,50,100,3,ok,0,0.696265,,outputs/z1__dfs__z1__g7.txt__run3.txt
+z1,dfs,z1/g7.txt,D,50,100,4,ok,0,0.724048,,outputs/z1__dfs__z1__g7.txt__run4.txt
+z1,dfs,z1/g7.txt,D,50,100,5,ok,0,0.673312,,outputs/z1__dfs__z1__g7.txt__run5.txt
+z1,dfs,z1/g8.txt,U,50,100,1,ok,0,0.872114,,outputs/z1__dfs__z1__g8.txt__run1.txt
+z1,dfs,z1/g8.txt,U,50,100,2,ok,0,0.772478,,outputs/z1__dfs__z1__g8.txt__run2.txt
+z1,dfs,z1/g8.txt,U,50,100,3,ok,0,0.860142,,outputs/z1__dfs__z1__g8.txt__run3.txt
+z1,dfs,z1/g8.txt,U,50,100,4,ok,0,0.760155,,outputs/z1__dfs__z1__g8.txt__run4.txt
+z1,dfs,z1/g8.txt,U,50,100,5,ok,0,0.756578,,outputs/z1__dfs__z1__g8.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,1,ok,0,0.695153,acyclic,outputs/z2__topo__aod_testy1__2__g2a-1.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,2,ok,0,0.705412,acyclic,outputs/z2__topo__aod_testy1__2__g2a-1.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,3,ok,0,0.731341,acyclic,outputs/z2__topo__aod_testy1__2__g2a-1.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,4,ok,0,0.687969,acyclic,outputs/z2__topo__aod_testy1__2__g2a-1.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,5,ok,0,0.674264,acyclic,outputs/z2__topo__aod_testy1__2__g2a-1.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,1,ok,0,0.764944,acyclic,outputs/z2__topo__aod_testy1__2__g2a-2.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,2,ok,0,0.714479,acyclic,outputs/z2__topo__aod_testy1__2__g2a-2.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,3,ok,0,0.712466,acyclic,outputs/z2__topo__aod_testy1__2__g2a-2.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,4,ok,0,0.75203,acyclic,outputs/z2__topo__aod_testy1__2__g2a-2.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,5,ok,0,0.711994,acyclic,outputs/z2__topo__aod_testy1__2__g2a-2.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,1,ok,0,1.887688,acyclic,outputs/z2__topo__aod_testy1__2__g2a-3.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,2,ok,0,1.676563,acyclic,outputs/z2__topo__aod_testy1__2__g2a-3.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,3,ok,0,1.727397,acyclic,outputs/z2__topo__aod_testy1__2__g2a-3.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,4,ok,0,1.816455,acyclic,outputs/z2__topo__aod_testy1__2__g2a-3.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,5,ok,0,1.747365,acyclic,outputs/z2__topo__aod_testy1__2__g2a-3.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,1,ok,0,7.252494,acyclic,outputs/z2__topo__aod_testy1__2__g2a-4.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,2,ok,0,7.345047,acyclic,outputs/z2__topo__aod_testy1__2__g2a-4.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,3,ok,0,7.262693,acyclic,outputs/z2__topo__aod_testy1__2__g2a-4.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,4,ok,0,7.371687,acyclic,outputs/z2__topo__aod_testy1__2__g2a-4.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,5,ok,0,16.810709,acyclic,outputs/z2__topo__aod_testy1__2__g2a-4.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,1,ok,0,104.242166,acyclic,outputs/z2__topo__aod_testy1__2__g2a-5.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,2,ok,0,112.778205,acyclic,outputs/z2__topo__aod_testy1__2__g2a-5.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,3,ok,0,118.866186,acyclic,outputs/z2__topo__aod_testy1__2__g2a-5.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,4,ok,0,109.932992,acyclic,outputs/z2__topo__aod_testy1__2__g2a-5.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,5,ok,0,116.187305,acyclic,outputs/z2__topo__aod_testy1__2__g2a-5.txt__run5.txt
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,1,ok,0,691.995889,acyclic,outputs/z2__topo__aod_testy1__2__g2a-6.txt__run1.txt
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,2,ok,0,666.615938,acyclic,outputs/z2__topo__aod_testy1__2__g2a-6.txt__run2.txt
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,3,ok,0,665.47522,acyclic,outputs/z2__topo__aod_testy1__2__g2a-6.txt__run3.txt
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,4,ok,0,662.370661,acyclic,outputs/z2__topo__aod_testy1__2__g2a-6.txt__run4.txt
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,5,ok,0,713.064398,acyclic,outputs/z2__topo__aod_testy1__2__g2a-6.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,1,ok,0,1.48322,cycle,outputs/z2__topo__aod_testy1__2__g2b-1.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,2,ok,0,0.886161,cycle,outputs/z2__topo__aod_testy1__2__g2b-1.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,3,ok,0,1.312821,cycle,outputs/z2__topo__aod_testy1__2__g2b-1.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,4,ok,0,1.529526,cycle,outputs/z2__topo__aod_testy1__2__g2b-1.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,5,ok,0,0.804889,cycle,outputs/z2__topo__aod_testy1__2__g2b-1.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,1,ok,0,1.587075,cycle,outputs/z2__topo__aod_testy1__2__g2b-2.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,2,ok,0,2.162203,cycle,outputs/z2__topo__aod_testy1__2__g2b-2.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,3,ok,0,1.873873,cycle,outputs/z2__topo__aod_testy1__2__g2b-2.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,4,ok,0,1.177407,cycle,outputs/z2__topo__aod_testy1__2__g2b-2.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,5,ok,0,2.005138,cycle,outputs/z2__topo__aod_testy1__2__g2b-2.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,1,ok,0,4.085147,cycle,outputs/z2__topo__aod_testy1__2__g2b-3.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,2,ok,0,2.241481,cycle,outputs/z2__topo__aod_testy1__2__g2b-3.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,3,ok,0,4.627864,cycle,outputs/z2__topo__aod_testy1__2__g2b-3.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,4,ok,0,4.542234,cycle,outputs/z2__topo__aod_testy1__2__g2b-3.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,5,ok,0,2.377456,cycle,outputs/z2__topo__aod_testy1__2__g2b-3.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,1,ok,0,10.749017,cycle,outputs/z2__topo__aod_testy1__2__g2b-4.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,2,ok,0,13.73297,cycle,outputs/z2__topo__aod_testy1__2__g2b-4.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,3,ok,0,17.571485,cycle,outputs/z2__topo__aod_testy1__2__g2b-4.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,4,ok,0,17.374115,cycle,outputs/z2__topo__aod_testy1__2__g2b-4.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,5,ok,0,17.065978,cycle,outputs/z2__topo__aod_testy1__2__g2b-4.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,1,ok,0,144.335765,cycle,outputs/z2__topo__aod_testy1__2__g2b-5.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,2,ok,0,109.242458,cycle,outputs/z2__topo__aod_testy1__2__g2b-5.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,3,ok,0,112.618225,cycle,outputs/z2__topo__aod_testy1__2__g2b-5.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,4,ok,0,119.527195,cycle,outputs/z2__topo__aod_testy1__2__g2b-5.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,5,ok,0,112.594531,cycle,outputs/z2__topo__aod_testy1__2__g2b-5.txt__run5.txt
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,1,ok,0,664.852492,cycle,outputs/z2__topo__aod_testy1__2__g2b-6.txt__run1.txt
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,2,ok,0,669.378305,cycle,outputs/z2__topo__aod_testy1__2__g2b-6.txt__run2.txt
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,3,ok,0,662.438477,cycle,outputs/z2__topo__aod_testy1__2__g2b-6.txt__run3.txt
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,4,ok,0,653.760974,cycle,outputs/z2__topo__aod_testy1__2__g2b-6.txt__run4.txt
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,5,ok,0,667.88705,cycle,outputs/z2__topo__aod_testy1__2__g2b-6.txt__run5.txt
+z2,topo,z2/g1.txt,D,15,22,1,ok,0,1.622501,acyclic,outputs/z2__topo__z2__g1.txt__run1.txt
+z2,topo,z2/g1.txt,D,15,22,2,ok,0,0.99249,acyclic,outputs/z2__topo__z2__g1.txt__run2.txt
+z2,topo,z2/g1.txt,D,15,22,3,ok,0,1.493239,acyclic,outputs/z2__topo__z2__g1.txt__run3.txt
+z2,topo,z2/g1.txt,D,15,22,4,ok,0,0.764502,acyclic,outputs/z2__topo__z2__g1.txt__run4.txt
+z2,topo,z2/g1.txt,D,15,22,5,ok,0,1.453485,acyclic,outputs/z2__topo__z2__g1.txt__run5.txt
+z2,topo,z2/g2.txt,D,15,23,1,ok,0,1.624124,cycle,outputs/z2__topo__z2__g2.txt__run1.txt
+z2,topo,z2/g2.txt,D,15,23,2,ok,0,1.479102,cycle,outputs/z2__topo__z2__g2.txt__run2.txt
+z2,topo,z2/g2.txt,D,15,23,3,ok,0,1.669529,cycle,outputs/z2__topo__z2__g2.txt__run3.txt
+z2,topo,z2/g2.txt,D,15,23,4,ok,0,1.460788,cycle,outputs/z2__topo__z2__g2.txt__run4.txt
+z2,topo,z2/g2.txt,D,15,23,5,ok,0,0.846958,cycle,outputs/z2__topo__z2__g2.txt__run5.txt
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,1,ok,0,1.529838,scc=5,outputs/z3__scc__aod_testy1__3__g3-1.txt__run1.txt
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,2,ok,0,0.892563,scc=5,outputs/z3__scc__aod_testy1__3__g3-1.txt__run2.txt
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,3,ok,0,1.530239,scc=5,outputs/z3__scc__aod_testy1__3__g3-1.txt__run3.txt
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,4,ok,0,0.899856,scc=5,outputs/z3__scc__aod_testy1__3__g3-1.txt__run4.txt
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,5,ok,0,1.591002,scc=5,outputs/z3__scc__aod_testy1__3__g3-1.txt__run5.txt
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,1,ok,0,1.48847,scc=5,outputs/z3__scc__aod_testy1__3__g3-2.txt__run1.txt
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,2,ok,0,2.514263,scc=5,outputs/z3__scc__aod_testy1__3__g3-2.txt__run2.txt
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,3,ok,0,1.484653,scc=5,outputs/z3__scc__aod_testy1__3__g3-2.txt__run3.txt
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,4,ok,0,0.873988,scc=5,outputs/z3__scc__aod_testy1__3__g3-2.txt__run4.txt
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,5,ok,0,0.862196,scc=5,outputs/z3__scc__aod_testy1__3__g3-2.txt__run5.txt
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,1,ok,0,2.599032,scc=5,outputs/z3__scc__aod_testy1__3__g3-3.txt__run1.txt
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,2,ok,0,1.262236,scc=5,outputs/z3__scc__aod_testy1__3__g3-3.txt__run2.txt
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,3,ok,0,2.57692,scc=5,outputs/z3__scc__aod_testy1__3__g3-3.txt__run3.txt
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,4,ok,0,1.868212,scc=5,outputs/z3__scc__aod_testy1__3__g3-3.txt__run4.txt
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,5,ok,0,2.411921,scc=5,outputs/z3__scc__aod_testy1__3__g3-3.txt__run5.txt
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,1,ok,0,5.204434,scc=5,outputs/z3__scc__aod_testy1__3__g3-4.txt__run1.txt
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,2,ok,0,14.413796,scc=5,outputs/z3__scc__aod_testy1__3__g3-4.txt__run2.txt
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,3,ok,0,5.921179,scc=5,outputs/z3__scc__aod_testy1__3__g3-4.txt__run3.txt
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,4,ok,0,10.28657,scc=5,outputs/z3__scc__aod_testy1__3__g3-4.txt__run4.txt
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,5,ok,0,12.499759,scc=5,outputs/z3__scc__aod_testy1__3__g3-4.txt__run5.txt
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,1,ok,0,63.384043,scc=5,outputs/z3__scc__aod_testy1__3__g3-5.txt__run1.txt
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,2,ok,0,59.193008,scc=5,outputs/z3__scc__aod_testy1__3__g3-5.txt__run2.txt
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,3,ok,0,54.564773,scc=5,outputs/z3__scc__aod_testy1__3__g3-5.txt__run3.txt
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,4,ok,0,65.058803,scc=5,outputs/z3__scc__aod_testy1__3__g3-5.txt__run4.txt
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,5,ok,0,61.663919,scc=5,outputs/z3__scc__aod_testy1__3__g3-5.txt__run5.txt
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,1,ok,0,509.038624,scc=5,outputs/z3__scc__aod_testy1__3__g3-6.txt__run1.txt
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,2,ok,0,572.853004,scc=5,outputs/z3__scc__aod_testy1__3__g3-6.txt__run2.txt
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,3,ok,0,491.20659,scc=5,outputs/z3__scc__aod_testy1__3__g3-6.txt__run3.txt
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,4,ok,0,515.429362,scc=5,outputs/z3__scc__aod_testy1__3__g3-6.txt__run4.txt
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,5,ok,0,494.872451,scc=5,outputs/z3__scc__aod_testy1__3__g3-6.txt__run5.txt
+z3,scc,z3/g1.txt,D,15,23,1,ok,0,1.686902,scc=1,outputs/z3__scc__z3__g1.txt__run1.txt
+z3,scc,z3/g1.txt,D,15,23,2,ok,0,1.533554,scc=1,outputs/z3__scc__z3__g1.txt__run2.txt
+z3,scc,z3/g1.txt,D,15,23,3,ok,0,1.362133,scc=1,outputs/z3__scc__z3__g1.txt__run3.txt
+z3,scc,z3/g1.txt,D,15,23,4,ok,0,0.806762,scc=1,outputs/z3__scc__z3__g1.txt__run4.txt
+z3,scc,z3/g1.txt,D,15,23,5,ok,0,1.43532,scc=1,outputs/z3__scc__z3__g1.txt__run5.txt
+z3,scc,z3/g2.txt,D,15,23,1,ok,0,1.417818,scc=5,outputs/z3__scc__z3__g2.txt__run1.txt
+z3,scc,z3/g2.txt,D,15,23,2,ok,0,1.416555,scc=5,outputs/z3__scc__z3__g2.txt__run2.txt
+z3,scc,z3/g2.txt,D,15,23,3,ok,0,0.755376,scc=5,outputs/z3__scc__z3__g2.txt__run3.txt
+z3,scc,z3/g2.txt,D,15,23,4,ok,0,1.438235,scc=5,outputs/z3__scc__z3__g2.txt__run4.txt
+z3,scc,z3/g2.txt,D,15,23,5,ok,0,1.543743,scc=5,outputs/z3__scc__z3__g2.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,1,ok,0,1.741604,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-1.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,2,ok,0,1.507606,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-1.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,3,ok,0,0.766566,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-1.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,4,ok,0,0.964658,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-1.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,5,ok,0,1.479794,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-1.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,1,ok,0,0.790221,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-2.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,2,ok,0,0.773239,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-2.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,3,ok,0,0.788929,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-2.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,4,ok,0,0.773269,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-2.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,5,ok,0,1.92071,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-2.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,1,ok,0,1.743558,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-3.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,2,ok,0,5.322486,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-3.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,3,ok,0,1.728039,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-3.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,4,ok,0,2.249085,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-3.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,5,ok,0,3.790155,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-3.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,1,ok,0,11.002342,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-4.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,2,ok,0,8.212302,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-4.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,3,ok,0,18.018402,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-4.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,4,ok,0,18.953756,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-4.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,5,ok,0,16.559298,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-4.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,1,ok,0,122.452789,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-5.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,2,ok,0,121.068694,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-5.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,3,ok,0,123.993767,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-5.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,4,ok,0,125.629433,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-5.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,5,ok,0,122.802174,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-5.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,1,ok,0,709.030066,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-6.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,2,ok,0,681.281185,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-6.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,3,ok,0,689.143743,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-6.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,4,ok,0,681.851585,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-6.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,5,ok,0,673.349609,bipartite,outputs/z4__bipartite__aod_testy1__4__d4a-6.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,1,ok,0,1.019371,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-1.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,2,ok,0,1.655654,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-1.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,3,ok,0,1.554373,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-1.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,4,ok,0,1.503198,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-1.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,5,ok,0,1.448004,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-1.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,1,ok,0,1.585932,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-2.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,2,ok,0,1.682894,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-2.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,3,ok,0,1.087488,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-2.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,4,ok,0,1.746964,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-2.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,5,ok,0,1.189459,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-2.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,1,ok,0,2.045484,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-3.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,2,ok,0,1.784815,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-3.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,3,ok,0,3.883679,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-3.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,4,ok,0,4.1027,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-3.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,5,ok,0,2.170598,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-3.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,1,ok,0,7.398027,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-4.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,2,ok,0,17.30706,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-4.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,3,ok,0,7.065112,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-4.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,4,ok,0,16.42218,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-4.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,5,ok,0,6.820714,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-4.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,1,ok,0,106.379672,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-5.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,2,ok,0,105.550628,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-5.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,3,ok,0,108.173394,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-5.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,4,ok,0,107.569813,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-5.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,5,ok,0,119.128107,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-5.txt__run5.txt
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,1,ok,0,673.632129,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-6.txt__run1.txt
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,2,ok,0,662.929979,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-6.txt__run2.txt
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,3,ok,0,661.675107,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-6.txt__run3.txt
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,4,ok,0,669.256698,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-6.txt__run4.txt
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,5,ok,0,651.025831,not bipartite,outputs/z4__bipartite__aod_testy1__4__d4b-6.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,1,ok,0,1.633717,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-1.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,2,ok,0,1.436818,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-1.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,3,ok,0,1.495447,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-1.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,4,ok,0,0.891083,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-1.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,5,ok,0,1.462937,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-1.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,1,ok,0,0.834126,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-2.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,2,ok,0,1.614261,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-2.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,3,ok,0,0.817115,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-2.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,4,ok,0,1.58189,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-2.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,5,ok,0,0.819609,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-2.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,1,ok,0,3.079973,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-3.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,2,ok,0,3.638852,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-3.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,3,ok,0,3.167336,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-3.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,4,ok,0,1.45414,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-3.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,5,ok,0,3.098538,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-3.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,1,ok,0,21.353942,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-4.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,2,ok,0,12.360667,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-4.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,3,ok,0,12.017684,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-4.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,4,ok,0,27.546568,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-4.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,5,ok,0,22.704077,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-4.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,1,ok,0,114.374218,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-5.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,2,ok,0,107.377411,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-5.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,3,ok,0,122.550417,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-5.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,4,ok,0,122.067481,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-5.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,5,ok,0,122.085685,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-5.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,1,ok,0,863.324427,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-6.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,2,ok,0,865.47223,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-6.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,3,ok,0,846.485722,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-6.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,4,ok,0,837.681223,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-6.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,5,ok,0,854.743827,bipartite,outputs/z4__bipartite__aod_testy1__4__u4a-6.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,1,ok,0,1.819305,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-1.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,2,ok,0,1.464159,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-1.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,3,ok,0,0.966364,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-1.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,4,ok,0,1.51806,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-1.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,5,ok,0,1.645199,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-1.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,1,ok,0,1.782748,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-2.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,2,ok,0,1.117347,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-2.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,3,ok,0,2.996676,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-2.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,4,ok,0,1.763942,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-2.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,5,ok,0,1.858931,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-2.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,1,ok,0,3.16905,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-3.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,2,ok,0,2.079505,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-3.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,3,ok,0,2.104732,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-3.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,4,ok,0,3.805094,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-3.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,5,ok,0,1.936325,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-3.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,1,ok,0,20.627147,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-4.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,2,ok,0,23.281401,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-4.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,3,ok,0,15.766722,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-4.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,4,ok,0,16.5699,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-4.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,5,ok,0,13.409867,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-4.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,1,ok,0,102.500765,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-5.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,2,ok,0,113.074206,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-5.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,3,ok,0,110.888583,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-5.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,4,ok,0,111.32944,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-5.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,5,ok,0,114.182798,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-5.txt__run5.txt
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,1,ok,0,852.200583,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-6.txt__run1.txt
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,2,ok,0,815.873318,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-6.txt__run2.txt
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,3,ok,0,816.676796,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-6.txt__run3.txt
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,4,ok,0,874.674888,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-6.txt__run4.txt
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,5,ok,0,825.529408,not bipartite,outputs/z4__bipartite__aod_testy1__4__u4b-6.txt__run5.txt
+z4,bipartite,z4/g1.txt,U,20,30,1,ok,0,0.75612,bipartite,outputs/z4__bipartite__z4__g1.txt__run1.txt
+z4,bipartite,z4/g1.txt,U,20,30,2,ok,0,0.737986,bipartite,outputs/z4__bipartite__z4__g1.txt__run2.txt
+z4,bipartite,z4/g1.txt,U,20,30,3,ok,0,1.025626,bipartite,outputs/z4__bipartite__z4__g1.txt__run3.txt
+z4,bipartite,z4/g1.txt,U,20,30,4,ok,0,0.897746,bipartite,outputs/z4__bipartite__z4__g1.txt__run4.txt
+z4,bipartite,z4/g1.txt,U,20,30,5,ok,0,1.701865,bipartite,outputs/z4__bipartite__z4__g1.txt__run5.txt
+z4,bipartite,z4/g2.txt,U,20,31,1,ok,0,1.469229,not bipartite,outputs/z4__bipartite__z4__g2.txt__run1.txt
+z4,bipartite,z4/g2.txt,U,20,31,2,ok,0,1.59265,not bipartite,outputs/z4__bipartite__z4__g2.txt__run2.txt
+z4,bipartite,z4/g2.txt,U,20,31,3,ok,0,0.879692,not bipartite,outputs/z4__bipartite__z4__g2.txt__run3.txt
+z4,bipartite,z4/g2.txt,U,20,31,4,ok,0,1.286926,not bipartite,outputs/z4__bipartite__z4__g2.txt__run4.txt
+z4,bipartite,z4/g2.txt,U,20,31,5,ok,0,0.58563,not bipartite,outputs/z4__bipartite__z4__g2.txt__run5.txt
+z4,bipartite,z4/g3.txt,U,20,30,1,ok,0,0.593815,bipartite,outputs/z4__bipartite__z4__g3.txt__run1.txt
+z4,bipartite,z4/g3.txt,U,20,30,2,ok,0,1.293328,bipartite,outputs/z4__bipartite__z4__g3.txt__run2.txt
+z4,bipartite,z4/g3.txt,U,20,30,3,ok,0,0.60178,bipartite,outputs/z4__bipartite__z4__g3.txt__run3.txt
+z4,bipartite,z4/g3.txt,U,20,30,4,ok,0,0.941067,bipartite,outputs/z4__bipartite__z4__g3.txt__run4.txt
+z4,bipartite,z4/g3.txt,U,20,30,5,ok,0,0.832012,bipartite,outputs/z4__bipartite__z4__g3.txt__run5.txt
+z4,bipartite,z4/g4.txt,U,20,31,1,ok,0,1.702537,not bipartite,outputs/z4__bipartite__z4__g4.txt__run1.txt
+z4,bipartite,z4/g4.txt,U,20,31,2,ok,0,1.477614,not bipartite,outputs/z4__bipartite__z4__g4.txt__run2.txt
+z4,bipartite,z4/g4.txt,U,20,31,3,ok,0,1.520425,not bipartite,outputs/z4__bipartite__z4__g4.txt__run3.txt
+z4,bipartite,z4/g4.txt,U,20,31,4,ok,0,1.345296,not bipartite,outputs/z4__bipartite__z4__g4.txt__run4.txt
+z4,bipartite,z4/g4.txt,U,20,31,5,ok,0,2.336988,not bipartite,outputs/z4__bipartite__z4__g4.txt__run5.txt

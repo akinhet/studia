@@ -1,0 +1,11 @@
+STDOUT:
+Number of SCCs: 5
+SCC 1 size: 7
+SCC 2 size: 400
+SCC 3 size: 400
+SCC 4 size: 200
+SCC 5 size: 1
+
+
+STDERR:
+

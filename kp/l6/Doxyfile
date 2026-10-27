@@ -1,0 +1,46 @@
+PROJECT_NAME           = "Simulation"
+PROJECT_BRIEF          = "Rabbits and wolf simulation"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = .
+FILE_PATTERNS          = *.java
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */.git/* */build/* */out/*
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_PACKAGE        = YES
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_DYNAMIC_SECTIONS  = YES
+
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = YES
+DOT_NUM_THREADS        = 2
+CLASS_DIAGRAMS         = YES
+COLLABORATION_GRAPH    = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+
+WARN_IF_UNDOCUMENTED   = YES
+QUIET                  = NO
+WARNINGS               = YES
+WARN_NO_PARAMDOC       = NO
+
+OPTIMIZE_OUTPUT_JAVA   = YES
+JAVADOC_AUTOBRIEF      = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+STRIP_CODE_COMMENTS    = YES

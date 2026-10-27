@@ -1,0 +1,67 @@
+task,algorithm,test_file,graph_type,vertices,edges,successful_runs,repeats,min_ms,mean_ms,median_ms,max_ms,stdev_ms,output_identical,result,statuses
+z1,bfs,z1/g1.txt,D,6,9,5,5,0.80578,1.141377,0.985497,1.90498,0.436283,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g2.txt,D,8,12,5,5,0.725279,0.930967,0.838291,1.357745,0.257734,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g3.txt,D,9,17,5,5,0.638256,0.876681,0.822922,1.368455,0.292995,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g4.txt,U,6,9,5,5,0.588252,0.78977,0.673533,1.35523,0.318722,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g5.txt,U,8,12,5,5,0.70985,0.783555,0.794168,0.838332,0.058456,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g6.txt,U,9,17,5,5,0.653956,0.728175,0.691416,0.874659,0.092916,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g7.txt,D,50,100,5,5,0.641042,0.721935,0.695513,0.838482,0.075386,True,,ok;ok;ok;ok;ok
+z1,bfs,z1/g8.txt,U,50,100,5,5,0.695814,0.77219,0.766918,0.858369,0.059193,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g1.txt,D,6,9,5,5,0.671499,0.744297,0.740809,0.814967,0.05264,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g2.txt,D,8,12,5,5,0.623168,0.680169,0.641382,0.823092,0.082344,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g3.txt,D,9,17,5,5,0.672711,0.716214,0.721853,0.738985,0.025869,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g4.txt,U,6,9,5,5,0.70435,0.754831,0.723456,0.828353,0.055039,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g5.txt,U,8,12,5,5,0.683992,0.758127,0.749575,0.866815,0.072093,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g6.txt,U,9,17,5,5,0.66146,0.705825,0.70949,0.740047,0.032597,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g7.txt,D,50,100,5,5,0.673312,0.710075,0.721542,0.735208,0.025003,True,,ok;ok;ok;ok;ok
+z1,dfs,z1/g8.txt,U,50,100,5,5,0.756578,0.804293,0.772478,0.872114,0.056912,True,,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-1.txt,D,16,33,5,5,0.674264,0.698828,0.695153,0.731341,0.02142,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-2.txt,D,100,261,5,5,0.711994,0.731183,0.714479,0.764944,0.025357,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-3.txt,D,1600,4641,5,5,1.676563,1.771094,1.747365,1.887688,0.08225,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-4.txt,D,10000,29601,5,5,7.252494,9.208526,7.345047,16.810709,4.25006,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-5.txt,D,160000,478401,5,5,104.242166,112.401371,112.778205,118.866186,5.67747,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2a-6.txt,D,1000000,2996001,5,5,662.370661,679.904421,666.615938,713.064398,22.011395,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-1.txt,D,16,34,5,5,0.804889,1.203323,1.312821,1.529526,0.337669,True,cycle,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-2.txt,D,100,262,5,5,1.177407,1.761139,1.873873,2.162203,0.388632,True,cycle,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-3.txt,D,1600,4642,5,5,2.241481,3.574836,4.085147,4.627864,1.174383,True,cycle,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-4.txt,D,10000,29602,5,5,10.749017,15.298713,17.065978,17.571485,2.989452,True,cycle,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-5.txt,D,160000,478402,5,5,109.242458,119.663635,112.618225,144.335765,14.291112,True,cycle,ok;ok;ok;ok;ok
+z2,topo,aod_testy1/2/g2b-6.txt,D,1000000,2996002,5,5,653.760974,663.66346,664.852492,669.378305,6.153694,True,cycle,ok;ok;ok;ok;ok
+z2,topo,z2/g1.txt,D,15,22,5,5,0.764502,1.265243,1.453485,1.622501,0.367487,True,acyclic,ok;ok;ok;ok;ok
+z2,topo,z2/g2.txt,D,15,23,5,5,0.846958,1.4161,1.479102,1.669529,0.330677,True,cycle,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-1.txt,D,16,39,5,5,0.892563,1.2887,1.529838,1.591002,0.359165,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-2.txt,D,107,185,5,5,0.862196,1.444714,1.484653,2.514263,0.673146,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-3.txt,D,1008,1609,5,5,1.262236,2.143664,2.411921,2.599032,0.574417,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-4.txt,D,10009,15943,5,5,5.204434,9.665148,10.28657,14.413796,4.027596,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-5.txt,D,100010,159679,5,5,54.564773,60.772909,61.663919,65.058803,4.093221,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,aod_testy1/3/g3-6.txt,D,1000011,1598897,5,5,491.20659,516.680006,509.038624,572.853004,32.938674,True,scc=5,ok;ok;ok;ok;ok
+z3,scc,z3/g1.txt,D,15,23,5,5,0.806762,1.364934,1.43532,1.686902,0.334893,True,scc=1,ok;ok;ok;ok;ok
+z3,scc,z3/g2.txt,D,15,23,5,5,0.755376,1.314345,1.417818,1.543743,0.316849,True,scc=5,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-1.txt,D,16,24,5,5,0.766566,1.292046,1.479794,1.741604,0.40839,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-2.txt,D,100,180,5,5,0.773239,1.009274,0.788929,1.92071,0.509574,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-3.txt,D,1600,3120,5,5,1.728039,2.966665,2.249085,5.322486,1.563101,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-4.txt,D,10000,19800,5,5,8.212302,14.54922,16.559298,18.953756,4.696074,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-5.txt,D,160000,319200,5,5,121.068694,123.189371,122.802174,125.629433,1.71688,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4a-6.txt,D,1000000,1998000,5,5,673.349609,686.931238,681.851585,709.030066,13.559498,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-1.txt,D,16,25,5,5,1.019371,1.43612,1.503198,1.655654,0.245204,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-2.txt,D,100,181,5,5,1.087488,1.458547,1.585932,1.746964,0.299932,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-3.txt,D,1600,3121,5,5,1.784815,2.797455,2.170598,4.1027,1.103109,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-4.txt,D,10000,19801,5,5,6.820714,11.002619,7.398027,17.30706,5.364303,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-5.txt,D,160000,319201,5,5,105.550628,109.360323,107.569813,119.128107,5.554781,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/d4b-6.txt,D,1000000,1998001,5,5,651.025831,663.703949,662.929979,673.632129,8.585623,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-1.txt,U,15,22,5,5,0.891083,1.384,1.462937,1.633717,0.285818,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-2.txt,U,127,190,5,5,0.817115,1.1334,0.834126,1.614261,0.424393,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-3.txt,U,1023,1534,5,5,1.45414,2.887768,3.098538,3.638852,0.833508,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-4.txt,U,16383,24574,5,5,12.017684,19.196588,21.353942,27.546568,6.79973,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-5.txt,U,131071,196606,5,5,107.377411,117.691042,122.067481,122.550417,6.697984,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4a-6.txt,U,1048575,1572862,5,5,837.681223,853.541486,854.743827,865.47223,11.627833,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-1.txt,U,15,22,5,5,0.966364,1.482617,1.51806,1.819305,0.319338,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-2.txt,U,127,190,5,5,1.117347,1.903929,1.782748,2.996676,0.679911,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-3.txt,U,1023,1534,5,5,1.936325,2.618941,2.104732,3.805094,0.826279,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-4.txt,U,16383,24574,5,5,13.409867,17.931007,16.5699,23.281401,3.964635,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-5.txt,U,131071,196606,5,5,102.500765,110.395158,111.32944,114.182798,4.608723,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,aod_testy1/4/u4b-6.txt,U,1048575,1572862,5,5,815.873318,836.990999,825.529408,874.674888,25.697268,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,z4/g1.txt,U,20,30,5,5,0.737986,1.023869,0.897746,1.701865,0.39655,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,z4/g2.txt,U,20,31,5,5,0.58563,1.162825,1.286926,1.59265,0.420521,True,not bipartite,ok;ok;ok;ok;ok
+z4,bipartite,z4/g3.txt,U,20,30,5,5,0.593815,0.8524,0.832012,1.293328,0.288258,True,bipartite,ok;ok;ok;ok;ok
+z4,bipartite,z4/g4.txt,U,20,31,5,5,1.345296,1.676572,1.520425,2.336988,0.390683,True,not bipartite,ok;ok;ok;ok;ok

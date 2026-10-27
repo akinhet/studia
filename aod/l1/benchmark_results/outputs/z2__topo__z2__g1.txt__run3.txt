@@ -1,0 +1,7 @@
+STDOUT:
+Graph is acyclic.
+8 2 5 1 11 4 15 13 9 10 7 6 3 12 14 
+
+
+STDERR:
+

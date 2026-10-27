@@ -1,0 +1,12 @@
+.text-area, .slider, .label, .button, .content, .axis, .root {
+	-fx-background-color: white;
+	-fx-text-fill: black;
+    -fx-tick-label-fill: white;
+}
+
+.button, .text-area {
+	-fx-border-color: lightgrey;
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-radius: 3px;
+}

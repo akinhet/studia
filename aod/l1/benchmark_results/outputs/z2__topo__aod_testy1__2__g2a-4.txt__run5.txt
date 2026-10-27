@@ -1,0 +1,6 @@
+STDOUT:
+Graph is acyclic.
+
+
+STDERR:
+

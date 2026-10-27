@@ -1,0 +1,16 @@
+STDOUT:
+SCC 1: 1 5 4 3 2 
+SCC 2: 12 15 14 13 
+SCC 3: 6 8 9 7 
+SCC 4: 10 11 
+SCC 5: 16 
+Number of SCCs: 5
+SCC 1 size: 5
+SCC 2 size: 4
+SCC 3 size: 4
+SCC 4 size: 2
+SCC 5 size: 1
+
+
+STDERR:
+
