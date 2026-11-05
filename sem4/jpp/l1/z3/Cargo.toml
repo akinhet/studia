@@ -1,0 +1,13 @@
+[package]
+name = "gcdlib"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "gcdlib"
+# staticlib - dla .a / .lib
+# cdylib - dla .so / .dll (widoczna dla C)
+# rlib - dla innych projektów w Rust
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]

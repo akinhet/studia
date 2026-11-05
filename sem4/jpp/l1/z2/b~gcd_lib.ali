@@ -1,0 +1,96 @@
+V "GNAT Lib v15"
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+
+U gcdlibmain%b		b~gcd_lib.adb		94e3645f OO PK IL
+Z system%s		system.ads		system.ali
+
+U gcdlibmain%s		b~gcd_lib.ads		741fd108 EE NE OO PK IL
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D b~gcd_lib.ads		20260326134044 02223fe3 gcdlibmain%s
+D b~gcd_lib.adb		20260326134044 96c15bbc gcdlibmain%b
+D system.ads		20260209135214 14286b0f system%s
+D s-parame.ads		20260209135214 3597fc11 system.parameters%s
+D s-secsta.ads		20260209135214 578279f5 system.secondary_stack%s
+D s-stoele.ads		20260209135214 ccded4e8 system.storage_elements%s
+G a e
+G c Z s b [gcdlibinit gcdlibmain 8 14 none]
+G c Z s b [gcdlibfinal gcdlibmain 11 14 none]
+G c Z b b [Tsec_default_sized_stacksBIP gcdlibmain 26 4 none]
+X 1 b~gcd_lib.ads
+6K9*gcdlibmain 127l5 127e15 2|7b14 199l5 199t15
+8U14*gcdlibinit 9i<c,gcdlibinit>22 2|50b14 188l8 188t18
+11U14*gcdlibfinal 12i<c,gcdlibfinal>22 2|33b14 45l8 45t19
+14M9*Version_32 15r22 17r22
+15m4*u00001{14M9} 16r22
+17m4*u00002{14M9} 18r22
+X 2 b~gcd_lib.adb
+9i4 E076{short_integer} 9m46 9r46 174r10 177m7 177r15
+10i4 E010{short_integer} 10m46 10r46 124r10 187m7 187r15
+11i4 E015{short_integer} 11m46 11r46 127r10 182m7 182r15
+12i4 E026{short_integer} 12m46 12r46 130r10 133m7 133r15
+13i4 E042{short_integer} 13m46 13r46 134r10 137m7 137r15
+14i4 E071{short_integer} 14m46 14r46 138r10 141m7 141r15
+15i4 E033{short_integer} 15m46 15r46 142r10 145m7 145r15
+16i4 E056{short_integer} 16m46 16r46 146r10 149m7 149r15
+17i4 E058{short_integer} 17m46 17r46 150r10 153m7 153r15
+18i4 E061{short_integer} 18m46 18r46 154r10 157m7 157r15
+19i4 E046{short_integer} 19m46 19r46 158r10 161m7 161r15
+20i4 E027{short_integer} 20m46 20r46 162r10 165m7 165r15
+21i4 E087{short_integer} 21m46 21r46 166r10 169m7 169r15
+22i4 E051{short_integer} 22m46 22r46 170r10 173m7 173r15
+23i4 E022{short_integer} 23m46 23r46 178r10 181m7 181r15
+24i4 E041{short_integer} 24m46 24r46 183r10 186m7 186r15
+26a4 Sec_Default_Sized_Stacks(5|43R9) 120m32 120r32
+28a4 Local_Priority_Specific_Dispatching{string} 108r9
+29a4 Local_Interrupt_States{string} 111r27
+31b4 Is_Elaborated{boolean} 39r14 42m7 97r10 100m7
+35U17*Runtime_Finalize 36b<c,__gnat_runtime_finalize>25 43s7
+47P9 No_Param_Proc 48r28 89r34
+51i7*Main_Priority{integer} 52m25 52r25 101m7
+53i7*Time_Slice_Value{integer} 54m25 54r25 102m7
+55e7*WC_Encoding{character} 56m25 56r25 103m7
+57e7*Locking_Policy{character} 58m25 58r25 104m7
+59e7*Queuing_Policy{character} 60m25 60r25 105m7
+61e7*Task_Dispatching_Policy{character} 62m25 62r25 106m7
+63m7*Priority_Specific_Dispatching{3|67M9} 64m25 64r25 107m7
+65i7*Num_Specific_Dispatching{integer} 66m25 66r25 109m7
+67i7*Main_CPU{integer} 68m25 68r25 110m7
+69m7*Interrupt_States{3|67M9} 70m25 70r25 111m7
+71i7*Num_Interrupt_States{integer} 72m25 72r25 112m7
+73i7*Unreserve_All_Interrupts{integer} 74m25 74r25 113m7
+75i7*Detect_Blocking{integer} 76m25 76r25 114m7
+77i7*Default_Stack_Size{integer} 78m25 78r25 115m7
+79i7*Default_Secondary_Stack_Size{4|57I9} 80m25 80r25 118m7
+81m7*Bind_Env_Addr{3|67M9} 82m25 82r25
+83i7*Interrupts_Default_To_System{integer} 84m25 84r25
+86U17*Runtime_Initialize 86>37 87b<c,__gnat_runtime_initialize>25 122s7
+86i37 Install_Handler{integer}
+89p7*Finalize_Library_Objects{47P9} 90m25 90r25
+91i7*Binder_Sec_Stacks_Count{natural} 92m27 92r27 119m7
+93m7*Default_Sized_SS_Pool{3|67M9} 94m27 94r27 120m7
+X 3 system.ads
+37K9*System 1|3w6 4r6 5r6 2|26r57 26r90 63r39 69r26 79r38 81r23 93r31 118r39
+. 3|155e11
+67M9*Address 2|63r46 69r33 81r30 93r38
+X 4 s-parame.ads
+50K16*Parameters 1|4w13 2|26r97 79r45 118r46 4|189e22
+57I9*Size_Type<long_integer> 2|79r56
+92i4*Runtime_Default_Sec_Stack_Size{57I9} 2|26r108 118r57
+X 5 s-secsta.ads
+35K16*Secondary_Stack 1|5w13 2|26r64 5|429e27
+43R9*SS_Stack 2|26r80 5|329e14
+

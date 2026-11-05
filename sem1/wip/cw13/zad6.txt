@@ -1,0 +1,5 @@
+def calc_height(start: Node):
+	if start = NULL:
+		return 0
+
+	return max(calc_height(start.left), calc_height(start.right)) + 1

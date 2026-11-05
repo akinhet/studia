@@ -1,0 +1,86 @@
+V "GNAT Lib v15"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+
+U main%b		main.adb		418349e7 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W gcdlibrust%s		gcdlibrust.ads		gcdlibrust.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.img_uns%s	s-imguns.ads		s-imguns.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D ada.ads		20260209135214 76789da1 ada%s
+D a-except.ads		20260209135214 e7970cd9 ada.exceptions%s
+D a-ioexce.ads		20260209135214 40018c65 ada.io_exceptions%s
+D a-stream.ads		20260209135214 17477cbd ada.streams%s
+D a-string.ads		20260209135214 90ac6797 ada.strings%s
+D a-sttebu.ads		20260209135214 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260209135214 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20260209135214 fbca0ad5 ada.tags%s
+D a-textio.ads		20260209135214 34ef47de ada.text_io%s
+D a-unccon.ads		20260209135214 0e9b276f ada.unchecked_conversion%s
+D gcdlibrust.ads	20260326123145 791f9dd7 gcdlibrust%s
+D interfac.ads		20260209135214 9111f9c1 interfaces%s
+D i-c.ads		20260209135214 e94c966a interfaces.c%s
+D i-cstrea.ads		20260209135214 ffd01b9d interfaces.c_streams%s
+D main.adb		20260326123201 e53f0584 main%b
+D system.ads		20260209135214 14286b0f system%s
+D s-conca2.ads		20260209135214 b5fb73f7 system.concat_2%s
+D s-conca4.ads		20260209135214 33f85f3e system.concat_4%s
+D s-crtl.ads		20260209135214 beb39b9e system.crtl%s
+D s-exctab.ads		20260209135214 91bef6ef system.exception_table%s
+D s-ficobl.ads		20260209135214 dc5161d4 system.file_control_block%s
+D s-imageu.ads		20260209135214 b0b50650 system.image_u%s
+D s-imguns.ads		20260209135214 c4e23690 system.img_uns%s
+D s-parame.ads		20260209135214 3597fc11 system.parameters%s
+D s-putima.ads		20260209135214 17291fe4 system.put_images%s
+D s-secsta.ads		20260209135214 578279f5 system.secondary_stack%s
+D s-soflin.ads		20260209135214 5d88fdea system.soft_links%s
+D s-stache.ads		20260209135214 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20260209135214 1c9580f6 system.standard_library%s
+D s-stoele.ads		20260209135214 ccded4e8 system.storage_elements%s
+D s-traent.ads		20260209135214 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20260209135214 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20260209135214 f810d31c system.val_spec%s
+D s-vauspe.ads		20260209135214 89269ba5 system.value_u_spec%s
+D s-vs_uns.ads		20260209135214 e7f47a27 system.vs_uns%s
+D s-wchcon.ads		20260209135214 d9032363 system.wch_con%s
+G a e
+G c Z b b [main standard 5 11 none]
+G r c none [main standard 5 11 none] [gcd gcdlibrust 12 13 none]
+G r c none [main standard 5 11 none] [euler_totient gcdlibrust 22 13 none]
+G r c none [main standard 5 11 none] [diophantes gcdlibrust 27 13 none]
+X 1 ada.ads
+18K9*Ada 22e8 15|1r6 1r23
+X 9 a-textio.ads
+58K13*Text_IO 785e16 15|1w10 1r27
+565U14*Put_Line 15|10s4 12s4 15s4
+X 11 gcdlibrust.ads
+3K9*GCDLibRust 32e15 15|3w6 6r10 10r48 12r44 14r11
+5R9*Diophantes_Result 9e6 15|6r21
+6m7*X{13|71M9} 15|16r34
+7m7*Y{13|71M9} 15|16r69
+12V13*GCD{13|71M9} 15|10s59
+22V13*Euler_Totient{13|71M9} 15|12s55
+27V13*Diophantes{5R9} 15|14s22
+X 12 interfac.ads
+47K9*Interfaces 247e15 15|2r6 2r24
+X 13 i-c.ads
+33K20*C 601e17 15|2w17 2r35
+71M9*unsigned 15|7r11 8r12 10r32 12r28 16r14 16r49
+X 15 main.adb
+5U11*Main 5b11 17l5 17t9
+6r4 Res{11|5R9} 14m4 16r30 16r65
+7m4 A{13|71M9} 10r64
+7m7 B{13|71M9}
+8m4 B_Val{13|71M9} 10r67
+

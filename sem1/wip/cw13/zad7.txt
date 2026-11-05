@@ -1,0 +1,27 @@
+typedef LNode {
+	elem : int;
+	prev, next : *LNode;
+};
+
+lroot : LNode <- NULL
+last : LNode <- NULL
+
+def transform(start : LNode):
+	if start = NULL:
+		return
+
+	transform(start.left)
+	
+	tmp <- new LNode
+	last.next = tmp
+	tmp.prev = last
+	last = tmp
+
+	transform(start.right)
+
+
+transform(root)
+
+lroot <- last
+while lroot.prev != NULL:
+	lroot = lroot.prev

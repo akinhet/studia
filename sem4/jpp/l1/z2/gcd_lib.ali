@@ -1,0 +1,80 @@
+V "GNAT Lib v15"
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+
+U gcd_lib%b		gcd_lib.adb		4ae83db5 NE OO PK
+
+U gcd_lib%s		gcd_lib.ads		42808f5b NE OO PR PK
+W interfaces%s		interfac.ads		interfac.ali
+
+D gcd_lib.ads		20260326110955 d391769a gcd_lib%s
+D gcd_lib.adb		20260326111349 99794b2f gcd_lib%b
+D interfac.ads		20260209135214 9111f9c1 interfaces%s
+D system.ads		20260209135214 14286b0f system%s
+G a e
+G c Z s b [gcd gcd_lib 12 13 none]
+G c Z s b [smallest_prime_factor gcd_lib 15 13 none]
+G c Z s b [euler_totient gcd_lib 18 13 none]
+G c Z s b [diophantes gcd_lib 21 13 none]
+G c Z s s [diophantes_resultIP gcd_lib 6 9 none]
+X 1 gcd_lib.ads
+3K9*Gcd_Lib 24l5 24e12 2|1b14 116l5 116t12
+6R9*Diophantes_Result 9e14 10r26 21r55 2|86r55
+7m7*X{3|92M9}
+8m7*Y{3|92M9}
+12V13*Gcd{3|92M9} 12>18 12>21 13i<c,gcd>22 2|38b13 42l8 42t11
+12m18 A{3|92M9} 2|38b18 39r55
+12m21 B{3|92M9} 2|38b21 39r71
+15V13*Smallest_Prime_Factor{3|92M9} 15>36 16i<c,smallest_prime_factor>22
+. 2|45b13 61l8 61t29
+15m36 N{3|92M9} 2|45b36 47r49 49r10 60r14
+18V13*Euler_Totient{3|92M9} 18>28 19i<c,euler_totient>22 2|64b13 83l8 83t21
+18m28 N{3|92M9} 2|64b28 65r30 67r30
+21V13*Diophantes{6R9} 21>25 21>28 21>31 22i<c,diophantes>22 2|86b13 114l8
+. 114t18
+21m25 A{3|92M9} 2|86b25 87r59 89r53
+21m28 B{3|92M9} 2|86b28 87r75 90r53
+21m31 C{3|92M9} 2|86b31 88r53
+X 2 gcd_lib.adb
+3R9 Egcd_Result 7e14 9r45 39r22 87r26
+4i7*X{3|68I9} 34m15 99r22
+5i7*Y{3|68I9} 34m28
+6i7*C{3|68I9} 34m41 41r31 94r27 98r29 101r32 102r32
+9V13 Egcd{3R9} 9b13 9>19 9>22 35l8 35t12 39s37 87s41
+9i19 A{3|68I9} 14r30
+9i22 B{3|68I9} 15r30
+10i7 Prev_X{3|68I9} 22r15 23m10 34r20
+11i7 Prev_Y{3|68I9} 26r15 27m10 34r33
+12i7 X{3|68I9} 21r17 22m10 22r28
+13i7 Y{3|68I9} 25r17 26m10 26r28
+14i7 A1{3|68I9} 19r15 30r16 31m10 34r46
+15i7 B1{3|68I9} 18r13 19r20 29r17 30m10 30r23
+16i7 Q{3|68I9} 19m10 22r24 26r24
+16i10 Tmp{3|68I9} 21m10 23r20 25m10 27r20 29m10 31r16
+39r7 Res{3R9} 41r27
+46i7 I{3|68I9} 53r13 53r17 54r22 55r33 57m10 57r15
+47i7 N_64{3|68I9} 53r22 54r13
+65m7 Res{3|92M9} 74m13 74r20 74r27 80m10 80r17 80r24 82r14
+66i7 I{3|68I9} 69r13 69r17 70r36 71r42 72r46 74r46 76m10 76r15
+67m7 Mut_N{3|92M9} 69r34 70r13 71r19 72m16 72r25 79r10 80r30
+87r7 Gcd_Res{3R9} 94r19 98r21 99r14 101r24 102r24
+88i7 C_64{3|68I9} 94r10 98r14 106r24 110r27
+89i7 A_64{3|68I9} 102r17 106r13 110r35
+90i7 B_64{3|68I9} 101r17 106r32 110r16
+92i7 Mul{3|68I9} 98m7 99r26
+92i12 X{3|68I9} 99m7 104m7 104r12 106r20 110m10 113r28
+92i15 Step_X{3|68I9} 101m7 104r18
+92i23 Step_Y{3|68I9} 102m7 109r19
+92i31 Y{3|68I9} 106m7 108r10 109m10 109r15 110r23 113r45
+X 3 interfac.ads
+47K9*Interfaces 1|1w6 1r22 3|247e15
+68I9*Integer_64<long_long_integer> 2|4r11 5r11 6r11 9r26 10r16 11r16 12r16
+. 13r16 14r16 15r16 16r16 39r43 39r59 46r14 47r23 47r37 66r15 69r22 87r47
+. 87r63 88r26 88r41 89r26 89r41 90r26 90r41 92r35
+92M9*Unsigned_32 1|7r11 8r11 12r25 12r45 15r40 15r60 18r32 18r52 21r35 2|38r25
+. 38r45 41r14 45r40 45r60 55r20 64r32 64r52 65r15 67r15 70r23 71r29 72r33
+. 74r33 86r35 113r15 113r32
+

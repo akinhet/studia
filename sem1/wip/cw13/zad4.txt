@@ -1,0 +1,8 @@
+def count_leafs(start: Node):
+	if start = NULL:
+		return 0
+	
+	if start.left = start.right = NULL:
+		return 1
+	
+	return count_leafs(start.left) + count_leafs(start.right)

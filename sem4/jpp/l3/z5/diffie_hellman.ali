@@ -1,0 +1,123 @@
+V "GNAT Lib v15"
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+
+U diffie_hellman%b	diffie_hellman.adb	79a2715f NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W system%s		system.ads		system.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+U diffie_hellman%s	diffie_hellman.ads	d3ce820f BN EE NE OO PK GE
+W modular_arithmetic%s	modular_arithmetic.adb	modular_arithmetic.ali
+
+D ada.ads		20260209135214 76789da1 ada%s
+D a-except.ads		20260209135214 e7970cd9 ada.exceptions%s
+D a-ioexce.ads		20260209135214 40018c65 ada.io_exceptions%s
+D a-numeri.ads		20260209135214 84bea7a3 ada.numerics%s
+D a-nudira.ads		20260209135214 5984dff3 ada.numerics.discrete_random%s
+D a-nudira.adb		20260209135214 0bfd6ec4 ada.numerics.discrete_random%b
+D a-stream.ads		20260209135214 17477cbd ada.streams%s
+D a-string.ads		20260209135214 90ac6797 ada.strings%s
+D a-sttebu.ads		20260209135214 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260209135214 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20260209135214 fbca0ad5 ada.tags%s
+D a-textio.ads		20260209135214 34ef47de ada.text_io%s
+D a-unccon.ads		20260209135214 0e9b276f ada.unchecked_conversion%s
+D diffie_hellman.ads	20260507093813 9c3f2884 diffie_hellman%s
+D diffie_hellman.adb	20260507102241 bc198628 diffie_hellman%b
+D interfac.ads		20260209135214 9111f9c1 interfaces%s
+D i-cstrea.ads		20260209135214 ffd01b9d interfaces.c_streams%s
+D modular_arithmetic.ads  20260507091922 4ff1aa8b modular_arithmetic%s
+D system.ads		20260209135214 14286b0f system%s
+D s-crtl.ads		20260209135214 beb39b9e system.crtl%s
+D s-exctab.ads		20260209135214 91bef6ef system.exception_table%s
+D s-ficobl.ads		20260209135214 dc5161d4 system.file_control_block%s
+D s-parame.ads		20260209135214 3597fc11 system.parameters%s
+D s-putima.ads		20260209135214 17291fe4 system.put_images%s
+D s-rannum.ads		20260209135214 95815eca system.random_numbers%s
+D s-secsta.ads		20260209135214 578279f5 system.secondary_stack%s
+D s-soflin.ads		20260209135214 5d88fdea system.soft_links%s
+D s-stache.ads		20260209135214 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20260209135214 1c9580f6 system.standard_library%s
+D s-stoele.ads		20260209135214 ccded4e8 system.storage_elements%s
+D s-traent.ads		20260209135214 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20260209135214 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20260209135214 d9032363 system.wch_con%s
+G a e
+G c Z s b [diffie_hellman standard 5 9 none]
+X 1 ada.ads
+18K9*Ada 22e8 15|1r6 7r28
+X 4 a-numeri.ads
+20K13*Numerics 36e17 15|1r10 7r32
+X 5 a-nudira.ads
+46k22*Discrete_Random 83e33 15|1w19 7r41
+52R9 Generator<25|65R9> 15|9r19[7]
+54V13 Random{long_integer} 15|66s34[7] 83s28[7]
+63U14 Reset<25|103p14> 15|119s13[7]
+X 14 diffie_hellman.ads
+4K17 Field[18|6] 7r20 15|5r8 12r24 32r35
+5k9*Diffie_Hellman 4z17 31E9 42l5 42e19 15|3b14 120l5 120t19
+7R12*Ring{18|8R9[4]} 13r49 14r23 14r54 20r45 22r43 24r35 24r48 25r35 25r48
+. 32r19 38r18 15|11r23 11r54 12r16 13r16 35r31 63r20 75r49 87r45 92r43 98r35
+. 98r48 108r35 108r48
+9R9*DH_Setup 11r30 13r32 18r38 31c9 33e14 36r18 15|31r27 75r32 80r38
+11V13*Create_DH{9R9} 15|31b10 73l5 73t14
+13V13*Get_Generator{7R12} 13>27 15|75b13 78l8 78t21
+13r27 DH{9R9} 15|75b27 77r14
+14V13*Power{7R12} 14>19 14>29 15|11b13 29l8 29t13 43s16 54s13 89s14 94s16
+14r19 A{7R12} 15|11b19 13r24
+14i29 B{long_integer} 15|11b29 14r32
+16R9*User 18r27 20r32 22r33 24r25 25r25 35c9 40e14 15|80r27 87r32 92r33 98r25
+. 108r25
+18U14*Init 18<19 18>33 15|80b14 85l8 85t12
+18r19 U{16R9} 15|80b19 82m7 83m7 84m7
+18r33 DH{9R9} 15|80b33 82r18
+20V13*Get_Public_Key{7R12} 20>28 15|87b13 90l8 90t22
+20r28 U{16R9} 15|87b28 89r20 89r39
+22U14*Set_Key 22=22 22>39 15|92b14 96l8 96t15
+22r22 U{16R9} 15|92b22 94m7 94r25 95m7
+22r39 A{7R12} 15|92b39 94r22
+24V13*Encrypt{7R12} 24>21 24>31 15|98b13 106l8 106t15
+24r21 U{16R9} 15|98b21 101r14 105r18
+24r31 M{7R12} 15|98b31 105r14
+25V13*Decrypt{7R12} 25>21 25>31 15|108b13 116l8 116t15
+25r21 U{16R9} 15|108b21 111r14 115r18
+25r31 C{7R12} 15|108b31 115r14
+27X4*Key_Not_Set 15|102r16 112r16
+32r7 Generator{7R12} 15|72m12 77r17 89r28
+36r7 Setup{9R9} 15|82m9 89r22
+37i7 Secret{long_integer} 15|83m9 89r41 94r27
+38r7 Key{7R12} 15|94m9 105r20 115r20
+39b7 Has_Key{boolean} 15|84m9 95m9 101r16 111r16
+X 15 diffie_hellman.adb
+7K12 Rand_Int[5|46] 9r10 66r25 83r19 119r4
+9r4 Gen{5|52R9[7]} 66r41 83r35 119r19
+12r7 Result{14|7R12} 20m13 20r23 28r14
+13r7 Base{14|7R12} 20r32 23m10 23r18 23r25
+14i7 Exp{long_integer} 17r13 19r14 24m10 24r17
+32i4 N{long_integer} 33r35 66r51
+33i4 Phi{long_integer} 36r34 43r25 54r22
+35V13 Is_Generator{boolean} 35b13 35>27 60l8 60t20 69s17
+35r27 G{14|7R12} 39r18 43r22 54r19
+36i7 Temp_Phi{long_integer} 41r22 42r13 46r19 47m16 47r28 53r10 54r28
+37i7 D{long_integer} 41r13 41r17 42r26 43r31 46r32 47r39 50m10 50r15
+62i4 Candidate_Val{long_integer} 66m7 67r32
+63r4 Candidate{14|7R12} 67m7 69r30 72r25
+X 18 modular_arithmetic.ads
+5i4 Modulo{long_integer} 15|32r41[14|4]
+6k9*Modular_Arithmetic 14|1w6 4r30 18|32e23
+8R9 Ring 14|7r26[4]
+14V14 "*"{8R9[14|4]} 15|20s30[14|4] 23s23[14|4] 105s16[14|4]
+15V14 "/"{8R9[14|4]} 15|115s16[14|4]
+17V14 "="{boolean} 15|43s34[14|4] 54s38[14|4]
+23V13 To_Ring{8R9[14|4]} 15|12s30[14|4] 43s36[14|4] 54s40[14|4] 67s24[14|4]
+24V13 To_Long{long_integer} 15|39s10[14|4]
+

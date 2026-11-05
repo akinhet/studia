@@ -1,0 +1,8 @@
+def count_vertices(start: Node):
+	if start = NULL:
+		return 0
+	
+	if start.left != NULL or start.right != NULL:
+		return 1 + count_vertices(start.left) + count_vertices(start.right)
+	
+	return 0

@@ -1,0 +1,137 @@
+     April 2026             May 2026              June 2026     
+Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su
+       1  2  3  4  5               1  2  3   1  2  3  4  5  6  7
+ 6  7  8  9 10 11 12   4  5  6  7  8  9 10   8  9 10 11 12 13 14
+13 14 15 16 17 18 19  11 12 13 14 15 16 17  15 16 17 18 19 20 21
+20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28
+27 28 29 30           25 26 27 28 29 30 31  29 30               
+                                                                
+ tmp $ # Piotr Zieniewicz 283961
+ tmp $ svn export https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem4/l3/
+A    l3
+A    l3/z1
+A    l3/z3
+A    l3/z4
+A    l3/z1/main.cpp
+A    l3/z1/wykresy.py
+A    l3/z1/wykresy_zlozonosci.png
+A    l3/z1/wyniki.csv
+A    l3/z3/main.cpp
+A    l3/z3/wykresy.py
+A    l3/z3/wykresy_grupy.png
+A    l3/z3/wyniki_z3.csv
+A    l3/z4/main.cpp
+A    l3/z4/wykresy.py
+A    l3/z4/wykresy_z4.png
+A    l3/z4/wyniki_z4.csv
+Exported revision 7.
+ tmp $ cd l3
+ l3 $ cd z1
+ z1 $ ls
+.rw-r--r-- 6.3k akinhet 10 May 19:44 main.cpp
+.rw-r--r-- 1.4k akinhet 10 May 19:44 wykresy.py
+.rw-r--r-- 575k akinhet 10 May 19:44 wykresy_zlozonosci.png
+.rw-r--r--  16k akinhet 10 May 19:44 wyniki.csv
+ z1 $ g++ -o main -O3 main.cpp                                                                                                                                           
+ z1 $ ./main test
+Podaj n: 15
+Podaj k [1 <= k <= 15]: 7
+
+======= TEST DLA n = 15, k = 7 =======
+
+--- RANDOMIZED SELECT ---
+Poczatkowy stan tablicy: [6, 2, 4, 7, 25, 24, 9, 2, 12, 21, 10, 16, 7, 6, 20]
+Koncowy stan tablicy: [2, 2, 4, 6, 6, 7, 7, 9, 12, 21, 10, 16, 20, 24, 25]
+Znaleziona statystyka pozycyjna: 7
+Porownania: 39 | Przestawienia: 29
+
+--- SELECT ---
+Poczatkowy stan tablicy: [6, 2, 4, 7, 25, 24, 9, 2, 12, 21, 10, 16, 7, 6, 20]
+Koncowy stan tablicy: [2, 2, 4, 6, 6, 7, 7, 9, 10, 24, 25, 12, 20, 16, 21]
+Znaleziona statystyka pozycyjna: 7
+Porownania: 66 | Przestawienia: 68
+
+--- WERYFIKACJA WYNIKOW ---
+Posortowany ciag kluczy: [2, 2, 4, 6, 6, 7, 7, 9, 10, 12, 16, 20, 21, 24, 25]
+Oczekiwana wartosc na pozycji k=7 (indeks 6): 7
+OK
+ z1 $ ./main test
+Podaj n: 15
+Podaj k [1 <= k <= 15]: 12
+
+======= TEST DLA n = 15, k = 12 =======
+
+--- RANDOMIZED SELECT ---
+Poczatkowy stan tablicy: [2, 14, 24, 17, 1, 5, 25, 11, 27, 14, 25, 23, 2, 8, 14]
+Koncowy stan tablicy: [2, 1, 5, 2, 8, 11, 14, 14, 14, 17, 23, 24, 25, 25, 27]
+Znaleziona statystyka pozycyjna: 24
+Porownania: 34 | Przestawienia: 23
+
+--- SELECT ---
+Poczatkowy stan tablicy: [2, 14, 24, 17, 1, 5, 25, 11, 27, 14, 25, 23, 2, 8, 14]
+Koncowy stan tablicy: [1, 2, 5, 11, 14, 2, 8, 14, 14, 17, 23, 24, 25, 27, 25]
+Znaleziona statystyka pozycyjna: 24
+Porownania: 61 | Przestawienia: 66
+
+--- WERYFIKACJA WYNIKOW ---
+Posortowany ciag kluczy: [1, 2, 2, 5, 8, 11, 14, 14, 14, 17, 23, 24, 25, 25, 27]
+Oczekiwana wartosc na pozycji k=12 (indeks 11): 24
+OK
+ z1 $ cd ../z3
+ z3 $ ls
+.rw-r--r-- 3.2k akinhet 10 May 19:44 main.cpp
+.rw-r--r-- 1.3k akinhet 10 May 19:44 wykresy.py
+.rw-r--r-- 617k akinhet 10 May 19:44 wykresy_grupy.png
+.rw-r--r-- 7.8k akinhet 10 May 19:44 wyniki_z3.csv
+ z3 $ g++ -o main -O3 main.cpp                                                                                                                                        
+ z3 $ ./main
+Rozpoczynam testy dla roznych wielkosci grup...
+Przetwarzam n = 5000...
+Przetwarzam n = 10000...
+Przetwarzam n = 15000...
+Przetwarzam n = 20000...
+Przetwarzam n = 25000...
+Przetwarzam n = 30000...
+Przetwarzam n = 35000...
+Przetwarzam n = 40000...
+Przetwarzam n = 45000...
+Przetwarzam n = 50000...
+Zakonczono! Wyniki w pliku 'wyniki_z3.csv'.
+ z3 $ cd ../z4
+ z4 $ ls
+.rw-r--r-- 4.1k akinhet 10 May 19:44 main.cpp
+.rw-r--r-- 1.2k akinhet 10 May 19:44 wykresy.py
+.rw-r--r-- 426k akinhet 10 May 19:44 wykresy_z4.png
+.rw-r--r-- 5.0k akinhet 10 May 19:44 wyniki_z4.csv
+ z4 $ g++ -o main -O3 main.cpp                                                                                                                                         
+ z4 $ ./main
+=== PREZENTACJA DLA MALYCH DANYCH (f1) ===
+Tablica A:
+0: 5.78
+1: 7.06
+2: 9.41
+3: 10.58
+4: 17.06
+5: 25.58
+6: 28.38
+7: 33.16
+8: 36.96
+9: 40.54
+10: 47.43
+11: 50.27
+12: 51.61
+13: 62.42
+14: 63.38
+
+Szukam q = 33.16 (istnieje)
+Matematycznie zawezono przedzial do indeksow: [7, 8]
+Zakonczono na indeksie: 7 -> TAK
+
+Szukam q = 100.00 (nie istnieje)
+Matematycznie zawezono przedzial do indeksow: [15, 14]
+==========================================
+
+Generowanie danych.
+Zakonczono! Wyniki zapisane w 'wyniki_z4.csv'.
+ z4 $ tmux capture-pane -p -S'-' -E'-' -J > sprawozdanie.txt
+

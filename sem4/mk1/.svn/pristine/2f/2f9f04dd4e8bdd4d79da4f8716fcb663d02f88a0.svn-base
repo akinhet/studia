@@ -1,0 +1,23 @@
+#!/bin/bash
+
+OUTPUT_FILE="results.csv"
+
+echo "n,compares" > $OUTPUT_FILE
+
+echo "Rozpoczynam pomiary..."
+
+for n in $(seq 100 100 900)
+do
+	for k in $(seq 1 20)
+	do
+		RESULT=$( ./generator $n $(echo "1000 - $n" | bc) -1 | ./search )
+
+		COMPARES=$(echo $RESULT | grep -oP 'compares: \K\d+')
+
+		echo "$n,$COMPARES" >> $OUTPUT_FILE
+	done
+
+	echo "Rozmiar $n x $(echo "1000 - $n" | bc)"
+done
+
+echo "Gotowe! Wyniki zapisano w $OUTPUT_FILE"

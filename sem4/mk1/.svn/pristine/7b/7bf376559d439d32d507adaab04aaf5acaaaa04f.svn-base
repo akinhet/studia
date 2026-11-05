@@ -1,0 +1,27 @@
+#!/bin/python
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "matplotlib",
+#     "numpy",
+#     "pandas",
+# ]
+# ///
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('results.csv')
+
+plt.figure(figsize=(10, 6))
+avg = df.groupby('n').mean().reset_index()
+plt.plot(avg['n'], avg['compares'], 'o-', label='Dane eksperymentalne')
+
+plt.title('Złożoność algorytmu wyszukiwania w macierzy posortowanej')
+plt.xlabel('Rozmiar macierzy (n x m)')
+plt.ylabel('Liczba porównań')
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+
+plt.savefig('wykres_zlozonosci.png')
+plt.show()

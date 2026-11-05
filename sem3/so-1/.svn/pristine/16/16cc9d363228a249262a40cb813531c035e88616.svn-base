@@ -1,0 +1,61 @@
+diff --git a/Makefile b/Makefile
+index 3f4dbb7..709c6fb 100644
+--- a/Makefile
++++ b/Makefile
+@@ -183,6 +183,7 @@ UPROGS=\
+ 	_usertests\
+ 	_wc\
+ 	_zombie\
++	_expr\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+diff --git a/expr.c b/expr.c
+new file mode 100644
+index 0000000..d16badc
+--- /dev/null
++++ b/expr.c
+@@ -0,0 +1,43 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++int main(int argc, char *argv[])
++{
++	if (argc != 4) {
++		printf(2, "Wrong number of args, expected %s <number> <operator> <number>\n", argv[0]);
++		exit();
++	}
++
++	if (strlen(argv[2]) > 1) {
++		printf(2, "Malformed operator\n");
++		exit();
++	}
++
++	int a = atoi(argv[1]),
++		b = atoi(argv[3]);
++
++	printf(2, "%d %d\n", a, b);
++
++	char op = argv[2][0];
++
++	switch (op) {
++		case '+':
++			printf(1, "%d\n", a + b);
++			break;
++		case '-':
++			printf(1, "%d\n", a - b);
++			break;
++		case '*':
++			printf(1, "%d\n", a * b);
++			break;
++		case '/':
++			printf(1, "%d\n", a / b);
++			break;
++		default:
++			printf(2, "Unknown operator: %c\n", op);
++			break;
++	}
++
++	exit();
++}

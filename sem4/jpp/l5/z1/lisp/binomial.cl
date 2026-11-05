@@ -1,0 +1,20 @@
+(defun binomial (n k)
+  (cond ((or (< n k) (< n 0) (< k 0)) nil)
+        ((or (= n k) (= k 0)) 1)
+        (t (+ (binomial (- n 1) k) (binomial (- n 1) (- k 1))))))
+
+(defun binomial2 (n k)
+  (cond ((< n k) nil)
+        ((< n 0) nil)
+        ((< k 0) nil)
+        (t (nth k (nth-pascal n)))))
+
+(defun nth-pascal (n)
+  (if (= n 0)
+    '(1)
+    (next-pascal (nth-pascal (- n 1)))))
+
+(defun next-pascal (row)
+  (let ((shifted-left (append row '(0)))
+        (shifted-right (cons 0 row)))
+  (mapcar #'+ shifted-left shifted-right)))

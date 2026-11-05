@@ -1,0 +1,123 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam interfaceStyle uml
+
+package "com.example.invoiceapp" {
+    class App {
+        - Scanner scanner
+        - ClientDao clientDao
+        - ArticleDao articleDao
+        - InvoiceDao invoiceDao
+        - InvoiceService invoiceService
+        + main(String[])
+    }
+}
+
+package "com.example.invoiceapp.service" {
+    class InvoiceService {
+        - InvoiceDao invoiceDao
+        + InvoiceService(InvoiceDao)
+        + createInvoice(Invoice): Invoice
+    }
+}
+
+package "com.example.invoiceapp.model" {
+    class Client {
+        - Integer id
+        - String name
+        - String nip
+        - String address
+    }
+
+    class Article {
+        - Integer id
+        - String code
+        - String name
+        - double price
+    }
+
+    class InvoiceItem {
+        - Integer id
+        - Article article
+        - int quantity
+        - double unitPrice
+        - double lineTotal
+        + computeLineTotal()
+    }
+
+    class Invoice {
+        - Integer id
+        - Client client
+        - String date
+        - List<InvoiceItem> items
+        - double total
+        + addItem(InvoiceItem)
+        + removeItem(InvoiceItem)
+        + computeTotal()
+    }
+
+    Client "1" <-- "many" Invoice
+    Invoice "1" --> "many" InvoiceItem
+    InvoiceItem "1" --> "1" Article
+}
+
+package "com.example.invoiceapp.dao" {
+    interface ClientDao {
+        + save(Client): Client
+        + findById(int): Client
+        + findAll(): List<Client>
+    }
+
+    interface ArticleDao {
+        + save(Article): Article
+        + findById(int): Article
+        + findAll(): List<Article>
+    }
+
+    interface InvoiceDao {
+        + save(Invoice): Invoice
+        + findById(int): Invoice
+        + findAll(): List<Invoice>
+    }
+}
+
+package "com.example.invoiceapp.dao.jdbc" {
+    class ClientDaoJdbc {
+        - DatabaseManager db
+    }
+
+    class ArticleDaoJdbc {
+        - DatabaseManager db
+    }
+
+    class InvoiceDaoJdbc {
+        - DatabaseManager db
+        - ArticleDaoJdbc articleDao
+        - ClientDaoJdbc clientDao
+    }
+
+    ClientDao <|.. ClientDaoJdbc
+    ArticleDao <|.. ArticleDaoJdbc
+    InvoiceDao <|.. InvoiceDaoJdbc
+}
+
+package "com.example.invoiceapp.db" {
+    class DatabaseManager {
+        + getInstance(): DatabaseManager
+        + getConnection(): Connection
+        + initSchemaIfNeeded()
+    }
+}
+
+App --> ClientDao
+App --> ArticleDao
+App --> InvoiceDao
+App --> InvoiceService
+InvoiceService --> InvoiceDao
+InvoiceDaoJdbc --> DatabaseManager
+ClientDaoJdbc --> DatabaseManager
+ArticleDaoJdbc --> DatabaseManager
+InvoiceDaoJdbc --> ClientDaoJdbc
+InvoiceDaoJdbc --> ArticleDaoJdbc
+
+@enduml

@@ -1,0 +1,50 @@
+curr <- root
+prev <- NULL
+
+while curr.elem != n and curr != NULL:
+	prev <- curr
+
+	if curr.elem > n:
+		curr <- curr.left
+	else:
+		curr <- curr.right
+
+if curr = NULL:
+	return root
+
+if curr.left = NULL or curr.right = NULL:
+	tmp <- curr.right
+
+	if curr.left = NULL:
+		tmp <- curr.left
+
+	if prev != NULL:
+		if curr = prev.left:
+			prev.left = tmp
+		else:
+			prev.right = tmp
+
+	free curr
+	return root
+
+else:
+	tmp <- curr.right
+	p <- curr
+
+	while tmp.left != NULL:
+		p = tmp
+		tmp = tmp.left
+
+	p.left = tmp.right
+
+	tmp.left = curr.left
+	tmp.right = curr.right
+
+	if prev != NULL:
+		if curr = prev.left:
+			prev.left = tmp
+		else:
+			prev.right = tmp
+	
+	free curr
+	return root

@@ -1,0 +1,4 @@
+cargo:rustc-link-search=native=/home/akinhet/studia/jpp/l1/z5/lib
+cargo:rustc-link-lib=static=gcdlib
+cargo:rustc-link-lib=dylib=gnat
+cargo:rerun-if-changed=lib/libgcdlib.a

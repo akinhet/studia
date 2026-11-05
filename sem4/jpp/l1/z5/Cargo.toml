@@ -1,0 +1,6 @@
+[package]
+name = "ada_gcd_binding"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

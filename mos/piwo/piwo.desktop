@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=PIWO Editor
+Exec=wine "C:\\Program Files (x86)\\PIWO Animation Editor Czech Republic 2015\\PIWO_Editor.exe"
+Icon=/home/akinhet/.wine/drive_c/Program Files (x86)/PIWO Animation Editor Czech Republic 2015/icon.ico
+Type=Application

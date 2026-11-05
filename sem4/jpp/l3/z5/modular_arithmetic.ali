@@ -1,0 +1,113 @@
+V "GNAT Lib v15"
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_RECURSION
+
+U modular_arithmetic%b	modular_arithmetic.adb	6c698f56 NE OO PK GE
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+U modular_arithmetic%s	modular_arithmetic.ads	229a32a6 BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20260209135214 76789da1 ada%s
+D a-except.ads		20260209135214 e7970cd9 ada.exceptions%s
+D a-ioexce.ads		20260209135214 40018c65 ada.io_exceptions%s
+D a-numeri.ads		20260209135214 84bea7a3 ada.numerics%s
+D a-nudira.ads		20260209135214 5984dff3 ada.numerics.discrete_random%s
+D a-stream.ads		20260209135214 17477cbd ada.streams%s
+D a-string.ads		20260209135214 90ac6797 ada.strings%s
+D a-sttebu.ads		20260209135214 f1ad67a2 ada.strings.text_buffers%s
+D a-stuten.ads		20260209135214 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20260209135214 fbca0ad5 ada.tags%s
+D a-textio.ads		20260209135214 34ef47de ada.text_io%s
+D a-unccon.ads		20260209135214 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20260209135214 9111f9c1 interfaces%s
+D i-cstrea.ads		20260209135214 ffd01b9d interfaces.c_streams%s
+D modular_arithmetic.ads  20260507091922 4ff1aa8b modular_arithmetic%s
+D modular_arithmetic.adb  20260507091836 239825dd modular_arithmetic%b
+D system.ads		20260209135214 14286b0f system%s
+D s-crtl.ads		20260209135214 beb39b9e system.crtl%s
+D s-exctab.ads		20260209135214 91bef6ef system.exception_table%s
+D s-ficobl.ads		20260209135214 dc5161d4 system.file_control_block%s
+D s-parame.ads		20260209135214 3597fc11 system.parameters%s
+D s-putima.ads		20260209135214 17291fe4 system.put_images%s
+D s-rannum.ads		20260209135214 95815eca system.random_numbers%s
+D s-secsta.ads		20260209135214 578279f5 system.secondary_stack%s
+D s-soflin.ads		20260209135214 5d88fdea system.soft_links%s
+D s-stache.ads		20260209135214 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20260209135214 1c9580f6 system.standard_library%s
+D s-stoele.ads		20260209135214 ccded4e8 system.storage_elements%s
+D s-traent.ads		20260209135214 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20260209135214 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20260209135214 d9032363 system.wch_con%s
+G a e
+G c Z s b [modular_arithmetic standard 6 9 none]
+X 1 ada.ads
+18K9*Ada 22e8 15|1r6 2r6
+X 4 a-numeri.ads
+20K13*Numerics 36e17 15|2r10
+X 5 a-nudira.ads
+46k22*Discrete_Random 83e33 15|2w19
+X 11 a-textio.ads
+58K13*Text_IO 785e16 15|1w10
+X 15 modular_arithmetic.ads
+5i4 Modulo{long_integer} 29r39 16|5r22 5r32 5r44 30r31 53r19
+6k9*Modular_Arithmetic 5z4 28E9 32l5 32e23 16|1b14 104l5 104t23
+8R9*Ring 12r25 12r38 13r25 13r38 14r25 14r38 15r25 15r38 17r26 18r26 19r26
+. 20r26 21r26 23r49 24r26 28c9 30e14 16|8r49 13r26 59r25 59r38 64r25 64r38
+. 69r25 69r38 74r25 74r38 79r25 84r25 89r26 94r25 99r26
+10X4*No_Inverse_Error 16|49r16
+12V14*"+"{8R9} 12>18 12>21 16|59b14 62l9 62t11
+12r18 L{8R9} 16|59b18 61r22
+12r21 R{8R9} 16|59b21 61r32
+13V14*"-"{8R9} 13>18 13>21 16|64b14 67l9 67t11
+13r18 L{8R9} 16|64b18 66r22
+13r21 R{8R9} 16|64b21 66r32
+14V14*"*"{8R9} 14>18 14>21 16|69b14 72l9 72t11
+14r18 L{8R9} 16|69b18 71r22
+14r21 R{8R9} 16|69b21 71r32
+15V14*"/"{8R9} 15>18 15>21 16|74b14 77l9 77t11
+15r18 L{8R9} 16|74b18 76r22
+15r21 R{8R9} 16|74b21 76r40
+17V14*"="{boolean} 17>19 17>22 16|79b14 82l9 82t11
+17r19 L{8R9} 16|79b18 81r14
+17r22 R{8R9} 16|79b21 81r24
+18V14*"<"{boolean} 18>19 18>22 16|84b14 87l9 87t11
+18r19 L{8R9} 16|84b18 86r14
+18r22 R{8R9} 16|84b21 86r24
+19V14*"<="{boolean} 19>19 19>22 16|89b14 92l9 92t12
+19r19 L{8R9} 16|89b19 91r14
+19r22 R{8R9} 16|89b22 91r25
+20V14*">"{boolean} 20>19 20>22 16|94b14 97l9 97t11
+20r19 L{8R9} 16|94b18 96r14
+20r22 R{8R9} 16|94b21 96r24
+21V14*">="{boolean} 21>19 21>22 16|99b14 102l9 102t12
+21r19 L{8R9} 16|99b19 101r14
+21r22 R{8R9} 16|99b22 101r25
+23V13*To_Ring{8R9} 23>22 16|8b13 11l8 11t15 61s14 66s14 71s14 76s14
+23i22 Val{long_integer} 16|8b22 10r34
+24V13*To_Long{long_integer} 24>22 16|13b13 16l8 16t15
+24r22 R{8R9} 16|13b22 15r14
+29i7 Value{long_integer} 16|10m15 15r16 61r24 61r34 66r24 66r34 71r24 71r34
+. 76r24 76r42 81r16 81r26 86r16 86r26 91r16 91r27 96r16 96r26 101r16 101r27
+X 16 modular_arithmetic.adb
+3V13 Normalize{long_integer} 3b13 3>24 6l8 6t17 10s24
+3i24 V{long_integer} 5r16
+18V13 GCD{long_integer} 18b13 18>18 18>21 23s17 25l8 25t11
+18i18 A{long_integer} 21r21 23r24
+18i21 B{long_integer} 20r10 23r21 23r30
+27V13 Inverse{long_integer} 27b13 27>22 57l8 57t15 76s32
+27i22 A{long_integer} 31r31
+28i7 T{long_integer} 39r18 40m10 52r10 53m10 53r15 56r14
+29i7 NewT{long_integer} 40r15 41m10 41r29
+30i7 R{long_integer} 37r15 43r18 44m10 48r10
+31i7 NewR{long_integer} 36r13 37r19 44r15 45m10 45r29
+32i7 Q{long_integer} 37m10 41r25 45r25
+33i7 Temp{long_integer} 39m10 41r18 43m10 45r18
+

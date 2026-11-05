@@ -1,0 +1,1 @@
+/home/akinhet/studia/jpp/l1/z5/target/release/ada_gcd_binding: /home/akinhet/studia/jpp/l1/z5/build.rs /home/akinhet/studia/jpp/l1/z5/lib/libgcdlib.a /home/akinhet/studia/jpp/l1/z5/src/lib.rs /home/akinhet/studia/jpp/l1/z5/src/main.rs

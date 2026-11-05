@@ -1,0 +1,66 @@
+V "GNAT Lib v15"
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+
+U modular_arithmetic%b	modular_arithmetic.adb	52a76937 NE OO PK GE
+
+U modular_arithmetic%s	modular_arithmetic.ads	320f0135 BN EE NE OO PK GE
+
+D modular_arithmetic.ads  20260415125357 320f0135 modular_arithmetic%s
+D modular_arithmetic.adb  20260415125417 60a86802 modular_arithmetic%b
+D system.ads		20260209135214 14286b0f system%s
+G a e
+G c Z s b [modular_arithmetic standard 3 9 none]
+X 1 modular_arithmetic.ads
+2i4 Modulo{long_integer} 28r39 2|4r40 17r28 23r10 40r33
+3k9*Modular_Arithmetic 2z4 27E9 30l5 30e23 2|1b14 66l5 66t23
+4R9*Ring 10r25 10r38 11r25 11r38 12r25 12r38 13r25 13r38 16r26 17r26 18r26
+. 19r26 20r26 23r49 24r26 27c9 29e14 2|3r49 10r26 45r25 45r38 48r25 48r38
+. 51r25 51r38 54r25 54r38 58r25 59r25 62r26 63r26 64r26
+7X4*No_Inverse_Error 2|37r16
+10V14*"+"{4R9} 10>18 10>21 2|45b14 46l53 46t55
+10r18 L{4R9} 2|45b18 46r28
+10r21 R{4R9} 2|45b21 46r38
+11V14*"-"{4R9} 11>18 11>21 2|48b14 49l53 49t55
+11r18 L{4R9} 2|48b18 49r28
+11r21 R{4R9} 2|48b21 49r38
+12V14*"*"{4R9} 12>18 12>21 2|51b14 52l53 52t55
+12r18 L{4R9} 2|51b18 52r28
+12r21 R{4R9} 2|51b21 52r38
+13V14*"/"{4R9} 13>18 13>21 2|54b14 55l70 55t72
+13r18 L{4R9} 2|54b18 55r28
+13r21 R{4R9} 2|54b21 55r54
+16V14*"="{boolean} 16>19 16>22 2|58b14 58l86 58t88
+16r19 L{4R9} 2|58b18 58r62
+16r22 R{4R9} 2|58b21 58r72
+17V14*"<"{boolean} 17>19 17>22 2|59b14 59l86 59t88
+17r19 L{4R9} 2|59b18 59r62
+17r22 R{4R9} 2|59b21 59r72
+18V14*"<="{boolean} 18>19 18>22 2|62b14 62l88 62t91
+18r19 L{4R9} 2|62b19 62r63
+18r22 R{4R9} 2|62b22 62r74
+19V14*">"{boolean} 19>19 19>22 2|63b14 63l87 63t89
+19r19 L{4R9} 2|63b19 63r63
+19r22 R{4R9} 2|63b22 63r73
+20V14*">="{boolean} 20>19 20>22 2|64b14 64l88 64t91
+20r19 L{4R9} 2|64b19 64r63
+20r22 R{4R9} 2|64b22 64r74
+23V13*To_Ring{4R9} 23>22 2|3b13 8l8 8t15 46s20 49s20 52s20 55s20
+23i22 Val{long_integer} 2|3b22 4r32
+24V13*To_Long{long_integer} 24>22 2|10b13 13l8 13t15
+24r22 R{4R9} 2|10b22 12r14
+28i7 Value{long_integer} 2|7m15 12r16 46r30 46r40 49r30 49r40 52r30 52r40
+. 55r30 55r56 58r64 58r74 59r64 59r74 62r65 62r76 63r65 63r75 64r65 64r76
+X 2 modular_arithmetic.adb
+4i7 Result{long_integer} 7r24
+16V13 Modular_Inverse{long_integer} 16b13 16>30 42l8 42t23 55s38
+16i30 A{long_integer} 21r28
+17i7 M0{long_integer} 26r13 27r20 28r15 29m10 29r23
+18i7 T{long_integer} 28m10 30r16 31m10 33r16
+18i10 Q{long_integer} 27m10 32r21
+19i7 X0{long_integer} 31r15 32m10 32r25
+20i7 X1{long_integer} 32r16 33m10 40r10 40m22 40r28 41r14
+21i7 AA{long_integer} 25r13 27r15 29r16 30m10 36r10
+

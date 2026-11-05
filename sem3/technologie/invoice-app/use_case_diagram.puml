@@ -1,0 +1,31 @@
+@startuml
+title Invoice CLI System - Use Case Diagram
+
+actor "Użytkownik CLI" as User
+
+rectangle "System Faktur CLI" {
+    (Przeglądaj klientów) as ViewClients
+    (Dodaj klienta) as AddClient
+
+    (Przeglądaj artykuły) as ViewArticles
+    (Dodaj artykuł) as AddArticle
+
+    (Przeglądaj faktury) as ViewInvoices
+    (Dodaj fakturę) as AddInvoice
+    (Wyświetl szczegóły faktury) as ShowInvoice
+
+    (Zakończ działanie) as Exit
+}
+
+User --> ViewClients
+User --> AddClient
+User --> ViewArticles
+User --> AddArticle
+User --> ViewInvoices
+User --> AddInvoice
+User --> ShowInvoice
+User --> Exit
+
+
+
+@enduml

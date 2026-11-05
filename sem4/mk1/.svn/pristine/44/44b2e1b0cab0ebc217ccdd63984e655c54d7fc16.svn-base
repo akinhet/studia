@@ -1,0 +1,267 @@
+#include <bits/time.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define max(x, y) (x < y ? y : x)
+
+#include "init.h"
+
+uint64_t x, w, s;
+
+static void init_rand() {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    x = w = s = init_rand_digits(ts.tv_nsec ^ ts.tv_sec);
+}
+
+inline static uint32_t my_rand() {
+  x *= x;
+  x += (w += s);
+  return x = (x >> 32) | (x << 32);
+}
+
+// 1. Zmiana struktury: dodane pole h dla błyskawicznego śledzenia wysokości
+typedef struct TNode {
+    int key;
+    struct TNode *left, *right;
+    int h;
+} TNode;
+
+// Globalne liczniki dla aktualnej operacji
+uint64_t current_comps = 0;
+uint64_t current_ptrs = 0;
+
+TNode* insert(TNode *root, int k)
+{
+    TNode *ptr = root,
+        *node = (TNode *) malloc(sizeof(TNode)),
+        *prev = root;
+
+    node->key = k;
+    node->left = NULL;
+    node->right = NULL;
+    node->h = 0;
+
+    if (ptr == NULL)
+        return node;
+
+    // Tablica na zapamiętanie ścieżki do aktualizacji wysokości
+    TNode* path[100010];
+    int path_count = 0;
+
+    while (ptr != NULL) {
+        path[path_count++] = ptr;
+        prev = ptr;
+        current_comps++; // porównanie kluczy
+        if (ptr->key < k) {
+            current_ptrs++; // odczyt ptr->right
+            ptr = ptr->right;
+        } else {
+            current_ptrs++; // odczyt ptr->left
+            ptr = ptr->left;
+        }
+    }
+
+    current_comps++; // porównanie kluczy przy wstawianiu
+    if (prev->key < k) {
+        current_ptrs++; // zapis prev->right
+        prev->right = node;
+    } else {
+        current_ptrs++; // zapis prev->left
+        prev->left = node;
+    }
+
+    // Aktualizacja wysokości węzłów na ścieżce (od dołu do góry)
+    for (int i = path_count - 1; i >= 0; i--) {
+        int hl = path[i]->left ? path[i]->left->h : -1;
+        int hr = path[i]->right ? path[i]->right->h : -1;
+        path[i]->h = 1 + max(hl, hr);
+    }
+
+    return root;
+}
+
+TNode* delete(TNode* root, int key)
+{
+    TNode* curr = root;
+    TNode* parent = NULL;
+
+    TNode* path[100010];
+    int path_count = 0;
+
+    while (curr != NULL && curr->key != key) {
+        path[path_count++] = curr;
+        parent = curr;
+        current_comps++;
+        if (key < curr->key) {
+            current_ptrs++;
+            curr = curr->left;
+        } else {
+            current_ptrs++;
+            curr = curr->right;
+        }
+    }
+
+    if (curr == NULL) {
+        return root;
+    }
+
+    current_ptrs += 2; // odczyt curr->left i curr->right
+    if (curr->left != NULL && curr->right != NULL) {
+        path[path_count++] = curr;
+        TNode* succ_parent = curr;
+        current_ptrs++;
+        TNode* succ = curr->right;
+
+        while (succ->left != NULL) {
+            path[path_count++] = succ;
+            succ_parent = succ;
+            current_ptrs++;
+            succ = succ->left;
+        }
+        current_ptrs++;
+
+        curr->key = succ->key;
+        parent = succ_parent;
+        curr = succ;
+    }
+
+    current_ptrs++;
+    TNode* child = (curr->left != NULL) ? curr->left : curr->right;
+    if (curr->left == NULL) current_ptrs++;
+
+    if (parent == NULL) {
+        root = child;
+    }
+    else {
+        current_ptrs++;
+        if (curr == parent->left) {
+            current_ptrs++;
+            parent->left = child;
+        }
+        else {
+            current_ptrs++;
+            parent->right = child;
+        }
+    }
+
+    free(curr);
+
+    // Aktualizacja wysokości węzłów na ścieżce po usunięciu
+    for (int i = path_count - 1; i >= 0; i--) {
+        int hl = path[i]->left ? path[i]->left->h : -1;
+        int hr = path[i]->right ? path[i]->right->h : -1;
+        path[i]->h = 1 + max(hl, hr);
+    }
+
+    return root;
+}
+
+// Pobieranie wysokości w O(1) dzięki polu w strukturze
+int height(TNode* root) {
+    if (root == NULL) {
+        return -1;
+    }
+    return root->h;
+}
+
+void generuj_permutacje(int *tab, int n, int asc)
+{
+    for (int i = 0; i < n; i++) {
+        tab[i] = i + 1;
+    }
+
+    if (asc)
+        return;
+
+    for (int i = n - 1; i > 0; i--) {
+        int j = my_rand() % (i + 1);
+
+        int temp = tab[i];
+        tab[i] = tab[j];
+        tab[j] = temp;
+    }
+}
+
+// Pusta funkcja zachowana dla kompatybilności wstecznej (nieużywana)
+void printTree(TNode* root, char* indent, int is_right) { (void)root; (void)indent; (void)is_right; }
+
+int main(int argc, char **argv)
+{
+    init_rand();
+
+    int n = 10000;
+    int asc = 0;
+
+    if (argc >= 2) n = atoi(argv[1]);
+    if (argc >= 3) asc = atoi(argv[2]);
+
+    int *keys = (int *) malloc(sizeof(int) * n);
+    int num_tests = 3;
+
+    // Zmienne do zbierania statystyk globalnych dla 20 testów
+    uint64_t total_ins_comps = 0, max_ins_comps = 0;
+    uint64_t total_ins_ptrs = 0, max_ins_ptrs = 0;
+    uint64_t total_ins_height = 0, max_ins_height = 0;
+
+    uint64_t total_del_comps = 0, max_del_comps = 0;
+    uint64_t total_del_ptrs = 0, max_del_ptrs = 0;
+    uint64_t total_del_height = 0, max_del_height = 0;
+
+    for (int t = 0; t < num_tests; t++) {
+        TNode *root = NULL;
+
+        // --- FAZA WSTAWIANIA ---
+        generuj_permutacje(keys, n, asc);
+        for (int i = 0; i < n; i++) {
+            current_comps = 0;
+            current_ptrs = 0;
+
+            root = insert(root, keys[i]);
+            int h = height(root);
+
+            total_ins_comps += current_comps;
+            if (current_comps > max_ins_comps) max_ins_comps = current_comps;
+
+            total_ins_ptrs += current_ptrs;
+            if (current_ptrs > max_ins_ptrs) max_ins_ptrs = current_ptrs;
+
+            total_ins_height += h;
+            if ((uint64_t)h > max_ins_height) max_ins_height = h;
+        }
+
+        // --- FAZA USUWANIA ---
+        generuj_permutacje(keys, n, 0); // losowa permutacja do usuwania
+        for (int i = 0; i < n; i++) {
+            current_comps = 0;
+            current_ptrs = 0;
+
+            root = delete(root, keys[i]);
+            int h = height(root);
+
+            total_del_comps += current_comps;
+            if (current_comps > max_del_comps) max_del_comps = current_comps;
+
+            total_del_ptrs += current_ptrs;
+            if (current_ptrs > max_del_ptrs) max_del_ptrs = current_ptrs;
+
+            total_del_height += h;
+            if ((uint64_t)h > max_del_height) max_del_height = h;
+        }
+    }
+
+    // Wypluwamy sformatowany wynik CSV na standardowe wyjście
+    printf("%d,%d,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%lu\n",
+           n, asc,
+           total_ins_comps, max_ins_comps,
+           total_ins_ptrs, max_ins_ptrs,
+           total_ins_height, max_ins_height,
+           total_del_comps, max_del_comps,
+           total_del_ptrs, max_del_ptrs,
+           total_del_height, max_del_height);
+
+    free(keys);
+    return 0;
+}

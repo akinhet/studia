@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <stdint.h>
+#include "init.h"
+
+// uint64_t x = 0, w = 0, s = 0xb5ad4eceda1ce2a9;
+uint64_t x, w, s;
+
+static void init_rand() { x = w = s = init_rand_digits(time(NULL)); }
+
+inline static uint32_t my_rand() {
+  x *= x;
+  x += (w += s);
+  return x = (x >> 32) | (x << 32);
+}
+
+
+int main(int argc, char** argv)
+{
+	if (argc != 2)
+		return 1;
+
+	int n = atoi(argv[1]);
+	printf("%d ", n);
+	init_rand();
+
+	for (int i = 0; i < n; i++) {
+		printf("%d ", my_rand() % (2*n));
+	}
+
+	printf("\n");
+
+	return 0;
+}

@@ -1,0 +1,126 @@
+From 9e4a6266eb010d422e4af5115344babbf0e01941 Mon Sep 17 00:00:00 2001
+From: akinhet <piotrzieniewicz2@gmail.com>
+Date: Sun, 4 Jan 2026 13:48:51 +0100
+Subject: [PATCH] zad1
+
+---
+ Makefile |  1 +
+ defs.h   |  1 +
+ exec.c   |  2 ++
+ proc.c   |  2 ++
+ testvm.c | 21 +++++++++++++++++++++
+ vm.c     | 23 +++++++++++++++++++++++
+ 6 files changed, 50 insertions(+)
+ create mode 100644 testvm.c
+
+diff --git a/Makefile b/Makefile
+index 3f4dbb7..68b494a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -183,6 +183,7 @@ UPROGS=\
+ 	_usertests\
+ 	_wc\
+ 	_zombie\
++	_testvm\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+diff --git a/defs.h b/defs.h
+index 82fb982..a7d942f 100644
+--- a/defs.h
++++ b/defs.h
+@@ -185,6 +185,7 @@ void            switchuvm(struct proc*);
+ void            switchkvm(void);
+ int             copyout(pde_t*, uint, void*, uint);
+ void            clearpteu(pde_t *pgdir, char *uva);
++void            vmprint(pde_t *pgdir, const char *calle);
+ 
+ // number of elements in fixed-size array
+ #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
+diff --git a/exec.c b/exec.c
+index b40134f..672f964 100644
+--- a/exec.c
++++ b/exec.c
+@@ -93,6 +93,8 @@ exec(char *path, char **argv)
+       last = s+1;
+   safestrcpy(curproc->name, last, sizeof(curproc->name));
+ 
++  vmprint(pgdir, "exec");
++
+   // Commit to the user image.
+   oldpgdir = curproc->pgdir;
+   curproc->pgdir = pgdir;
+diff --git a/proc.c b/proc.c
+index 806b1b1..f2d3c6a 100644
+--- a/proc.c
++++ b/proc.c
+@@ -231,6 +231,8 @@ exit(void)
+   struct proc *p;
+   int fd;
+ 
++  vmprint(curproc->pgdir, "exit");
++
+   if(curproc == initproc)
+     panic("init exiting");
+ 
+diff --git a/testvm.c b/testvm.c
+new file mode 100644
+index 0000000..3e91a06
+--- /dev/null
++++ b/testvm.c
+@@ -0,0 +1,21 @@
++#include "types.h"
++#include "user.h"
++
++#define PGSIZE 4096
++
++
++int
++main(void)
++{
++  char *start_addr = sbrk(0),
++       *new_mem = sbrk(5*PGSIZE),
++       *end_addr = sbrk(0);
++
++  if (new_mem == (char *)-1) {
++    printf(1, "ERROR: sbrk failed\n");
++    exit();
++  }
++
++  printf(1, "end addr before sbrk: 0x%p\nend addr after sbrk: 0x%p\ndiff: %d pages: %d\n", start_addr, end_addr, end_addr - start_addr, (end_addr - start_addr) / PGSIZE);
++  exit();
++}
+diff --git a/vm.c b/vm.c
+index 7134cff..77b1fb9 100644
+--- a/vm.c
++++ b/vm.c
+@@ -392,3 +392,26 @@ copyout(pde_t *pgdir, uint va, void *p, uint len)
+ //PAGEBREAK!
+ // Blank page.
+ 
++void
++vmprint(pde_t *pgdir, const char *calle)
++{
++  cprintf("%s - pgdir pa 0x%p\n", calle, pgdir);
++  for (int i = 0; i < NPDENTRIES/2; i++) {
++    pde_t pde = pgdir[i];
++    if (!(pde & PTE_P))
++      continue;
++
++    pde_t *pgtab = (pde_t*)P2V(PTE_ADDR(pde));
++    cprintf(".. %d: pde pa 0x%p flags 0x%x\n", i, pgtab, (uint)pgtab & 0xFFF);
++    for (int j = 0; j < NPDENTRIES; j++) {
++      pte_t pte = pgtab[j];
++      if (!(pte & PTE_P))
++        continue;
++
++      uint va = (i << PDXSHIFT | j << PTXSHIFT),
++           pa = PTE_ADDR(pte);
++      cprintf(".. .. %d: pte pa 0x%p va 0x%p flags 0x%x\n", j, pa, va, (uint)pte & 0xFFF);
++    }
++  }
++}
++
+-- 
+2.52.0
+

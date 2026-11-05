@@ -1,0 +1,6 @@
+curr <- root
+
+white curr.left != NULL:
+	curr <- curr.left
+
+print(curr.elem)

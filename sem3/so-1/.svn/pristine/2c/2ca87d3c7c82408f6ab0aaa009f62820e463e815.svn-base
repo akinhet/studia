@@ -1,0 +1,266 @@
+From 69f04c096650616a53985b5c60715bdca1478d69 Mon Sep 17 00:00:00 2001
+From: akinhet <piotrzieniewicz2@gmail.com>
+Date: Sun, 11 Jan 2026 23:32:09 +0100
+Subject: [PATCH] zad4
+
+---
+ Makefile  |  2 ++
+ defs.h    |  5 +++++
+ sem.c     | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ syscall.c |  6 ++++++
+ syscall.h |  3 +++
+ sysproc.c | 28 ++++++++++++++++++++++++++++
+ testsem.c | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ user.h    |  3 +++
+ usys.S    |  3 +++
+ 9 files changed, 151 insertions(+)
+ create mode 100644 sem.c
+ create mode 100644 testsem.c
+
+diff --git a/Makefile b/Makefile
+index 3f4dbb7..f390839 100644
+--- a/Makefile
++++ b/Makefile
+@@ -27,6 +27,7 @@ OBJS = \
+ 	uart.o\
+ 	vectors.o\
+ 	vm.o\
++	sem.o\
+ 
+ # Cross-compiling (e.g., on Mac OS X)
+ # TOOLPREFIX = i386-jos-elf
+@@ -183,6 +184,7 @@ UPROGS=\
+ 	_usertests\
+ 	_wc\
+ 	_zombie\
++	_testsem\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+diff --git a/defs.h b/defs.h
+index 82fb982..5b5389c 100644
+--- a/defs.h
++++ b/defs.h
+@@ -186,5 +186,10 @@ void            switchkvm(void);
+ int             copyout(pde_t*, uint, void*, uint);
+ void            clearpteu(pde_t *pgdir, char *uva);
+ 
++// sem.c
++int             sem_init(int sem, int cnt);
++int             sem_up(int);
++int             sem_down(int);
++
+ // number of elements in fixed-size array
+ #define NELEM(x) (sizeof(x)/sizeof((x)[0]))
+diff --git a/sem.c b/sem.c
+new file mode 100644
+index 0000000..445249a
+--- /dev/null
++++ b/sem.c
+@@ -0,0 +1,55 @@
++#include "types.h"
++#include "defs.h"
++#include "spinlock.h"
++
++struct sem {
++  struct spinlock lock;
++  int counter;
++  int active;
++};
++
++struct sem semaphores[10];
++
++int
++sem_init(int sem, int cnt)
++{
++  if (sem < 0 || sem > 9 || cnt < 0 || semaphores[sem].active)
++    return -1;
++
++  initlock(&semaphores[sem].lock, "semaphore");
++  acquire(&semaphores[sem].lock);
++  semaphores[sem].counter = cnt;
++  semaphores[sem].active = 1;
++  release(&semaphores[sem].lock);
++
++  return 0;
++}
++
++int
++sem_up(int sem)
++{
++  if (sem < 0 || sem > 9 || !semaphores[sem].active)
++    return -1;
++
++  acquire(&semaphores[sem].lock);
++  semaphores[sem].counter++;
++  wakeup(&semaphores[sem]);
++  release(&semaphores[sem].lock);
++
++  return 0;
++}
++
++int
++sem_down(int sem)
++{
++  if (sem < 0 || sem > 9 || !semaphores[sem].active)
++    return -1;
++
++  acquire(&semaphores[sem].lock);
++  while (semaphores[sem].counter <= 0)
++    sleep(&semaphores[sem], &semaphores[sem].lock);
++  semaphores[sem].counter--;
++  release(&semaphores[sem].lock);
++
++  return 0;
++}
+diff --git a/syscall.c b/syscall.c
+index ee85261..c6c847f 100644
+--- a/syscall.c
++++ b/syscall.c
+@@ -103,6 +103,9 @@ extern int sys_unlink(void);
+ extern int sys_wait(void);
+ extern int sys_write(void);
+ extern int sys_uptime(void);
++extern int sys_sem_init(void);
++extern int sys_sem_up(void);
++extern int sys_sem_down(void);
+ 
+ static int (*syscalls[])(void) = {
+ [SYS_fork]    sys_fork,
+@@ -126,6 +129,9 @@ static int (*syscalls[])(void) = {
+ [SYS_link]    sys_link,
+ [SYS_mkdir]   sys_mkdir,
+ [SYS_close]   sys_close,
++[SYS_sem_init] sys_sem_init,
++[SYS_sem_up]   sys_sem_up,
++[SYS_sem_down] sys_sem_down,
+ };
+ 
+ void
+diff --git a/syscall.h b/syscall.h
+index bc5f356..3c8bc81 100644
+--- a/syscall.h
++++ b/syscall.h
+@@ -20,3 +20,6 @@
+ #define SYS_link   19
+ #define SYS_mkdir  20
+ #define SYS_close  21
++#define SYS_sem_init 22
++#define SYS_sem_up   23
++#define SYS_sem_down 24
+diff --git a/sysproc.c b/sysproc.c
+index 0686d29..adcc10e 100644
+--- a/sysproc.c
++++ b/sysproc.c
+@@ -89,3 +89,31 @@ sys_uptime(void)
+   release(&tickslock);
+   return xticks;
+ }
++
++int
++sys_sem_init(void)
++{
++  int sem, cnt;
++  argint(0, &sem);
++  argint(1, &cnt);
++
++  return sem_init(sem, cnt);
++}
++
++int
++sys_sem_up(void)
++{
++  int sem;
++  argint(0, &sem);
++
++  return sem_up(sem);
++}
++
++int
++sys_sem_down(void)
++{
++  int sem;
++  argint(0, &sem);
++
++  return sem_down(sem);
++}
+diff --git a/testsem.c b/testsem.c
+new file mode 100644
+index 0000000..422b111
+--- /dev/null
++++ b/testsem.c
+@@ -0,0 +1,46 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++
++int main()
++{
++  int ret1, ret2;
++  int CHILDSEM=0;
++  int PARENTSEM=1;
++  
++  sem_init(CHILDSEM, 0);
++  sem_init(PARENTSEM, 0); 
++  
++  ret1 = fork();
++  if(ret1 == 0)
++    {
++      sem_down(CHILDSEM);
++      printf(1, "I am child 1\n");
++      sem_up(PARENTSEM);
++      exit();
++    }
++  else
++    {
++      ret2 = fork();
++      if(ret2 == 0)
++        {
++          sem_down(CHILDSEM);
++          printf(1, "I am child 2\n");
++          sem_up(PARENTSEM);
++          exit();
++        }
++      else {
++        sleep(2);
++        printf(1, "I am parent and I should print first\n");
++        sem_up(CHILDSEM);
++        sem_down(PARENTSEM);
++        printf(1, "Only one child has printed by now\n");
++        sem_up(CHILDSEM);
++        sem_down(PARENTSEM);
++        printf(1, "Both children have printed by now\n");
++        wait();
++        wait();
++        exit();
++      }
++    }
++}
+diff --git a/user.h b/user.h
+index 4f99c52..6c285c4 100644
+--- a/user.h
++++ b/user.h
+@@ -23,6 +23,9 @@ int getpid(void);
+ char* sbrk(int);
+ int sleep(int);
+ int uptime(void);
++int sem_init(int, int);
++int sem_up(int);
++int sem_down(int);
+ 
+ // ulib.c
+ int stat(const char*, struct stat*);
+diff --git a/usys.S b/usys.S
+index 8bfd8a1..c1f9e6d 100644
+--- a/usys.S
++++ b/usys.S
+@@ -29,3 +29,6 @@ SYSCALL(getpid)
+ SYSCALL(sbrk)
+ SYSCALL(sleep)
+ SYSCALL(uptime)
++SYSCALL(sem_init)
++SYSCALL(sem_up)
++SYSCALL(sem_down)
+-- 
+2.52.0
+

@@ -1,0 +1,46 @@
+V "GNAT Lib v15"
+P ZX
+
+RN
+
+U gcdlibrust%s		gcdlibrust.ads		90530bbd NE OO PK IU
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+
+D ada.ads		20260209135214 76789da1 ada%s
+D a-unccon.ads		20260209135214 0e9b276f ada.unchecked_conversion%s
+D gcdlibrust.ads	20260326123145 791f9dd7 gcdlibrust%s
+D interfac.ads		20260209135214 9111f9c1 interfaces%s
+D i-c.ads		20260209135214 e94c966a interfaces.c%s
+D system.ads		20260209135214 14286b0f system%s
+D s-exctab.ads		20260209135214 91bef6ef system.exception_table%s
+D s-parame.ads		20260209135214 3597fc11 system.parameters%s
+D s-stalib.ads		20260209135214 1c9580f6 system.standard_library%s
+G a e
+G c Z s s [gcd gcdlibrust 12 13 none]
+G c Z s s [smallest_prime_factor gcdlibrust 17 13 none]
+G c Z s s [euler_totient gcdlibrust 22 13 none]
+G c Z s s [diophantes gcdlibrust 27 13 none]
+G c Z s s [diophantes_resultIP gcdlibrust 5 9 none]
+X 3 gcdlibrust.ads
+3K9*GCDLibRust 32l5 32e15
+5R9*Diophantes_Result 9e6 27r52
+6m7*X{5|71M9}
+7m7*Y{5|71M9}
+12V13*GCD{5|71M9} 12>18 12>21
+12m18 A{5|71M9}
+12m21 B{5|71M9}
+17V13*Smallest_Prime_Factor{5|71M9} 17>36
+17m36 N{5|71M9}
+22V13*Euler_Totient{5|71M9} 22>28
+22m28 N{5|71M9}
+27V13*Diophantes{5R9} 27>25 27>28 27>31
+27m25 A{5|71M9}
+27m28 B{5|71M9}
+27m31 C{5|71M9}
+X 4 interfac.ads
+47K9*Interfaces 3|1r6 1r24 4|247e15
+X 5 i-c.ads
+33K20*C 3|1w17 1r35 5|601e17
+71M9*unsigned 3|6r11 7r11 12r25 12r42 17r40 17r57 22r32 22r49 27r35
+

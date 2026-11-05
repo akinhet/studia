@@ -1,0 +1,21 @@
+prev <- NULL
+curr <- root
+
+while curr != NULL:
+	if curr.elem = n:
+		return
+		
+	prev = curr
+
+	if curr.elem > n:
+		curr = curr.left
+	else:
+		curr = curr.right
+
+tmp <- new Node
+tmp.elem <- n
+
+if prev.elem > n:
+	prev.left = tmp
+else:
+	prev.right = tmp

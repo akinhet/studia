@@ -1,0 +1,25 @@
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "matplotlib>=3.10.9",
+#     "pandas>=3.0.2",
+# ]
+# ///
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('wyniki.csv')
+
+plt.figure(figsize=(10, 6))
+plt.plot(df['n'], df['Prim_Time'], marker='o', linestyle='-', color='b', label='Algorytm Prima $O(V^2)$')
+plt.plot(df['n'], df['Kruskal_Time'], marker='s', linestyle='-', color='r', label='Algorytm Kruskala $O(V^2 \\log V)$')
+
+plt.title('Porównanie czasu wykonania algorytmów MST dla grafu pełnego', fontsize=14, pad=15)
+plt.xlabel('Liczba wierzchołków ($n$)', fontsize=12)
+plt.ylabel('Średni czas wykonania (sekundy)', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend(fontsize=12)
+
+plt.tight_layout()
+plt.savefig("wykres.png", dpi=300)
+plt.show()
