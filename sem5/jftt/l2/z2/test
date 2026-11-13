@@ -1,0 +1,4 @@
+Put_Line("Hello -- world"); -- komentarz
+	-- komentarz   aaa
+Put_Line("Tekst z ""cudzysłowem--"" -- tutaj");
+	-- komentarz   aaa
