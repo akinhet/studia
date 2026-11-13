@@ -1,0 +1,168 @@
+    October 2026          November 2026         December 2026   
+Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su
+          1  2  3  4                     1      1  2  3  4  5  6
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   7  8  9 10 11 12 13
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  14 15 16 17 18 19 20
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  21 22 23 24 25 26 27
+26 27 28 29 30 31     23 24 25 26 27 28 29  28 29 30 31         
+                      30                                        
+ sprawozdanie $ # Piotr Zieniewicz 283961                                                                                                                                
+ sprawozdanie $ svn export https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/
+A    l1
+A    l1/z1
+A    l1/z2
+A    l1/z3
+A    l1/z4
+A    l1/z5
+A    l1/z1/go.mod
+A    l1/z1/z1.go
+A    l1/z2/random_seeds.adb
+A    l1/z2/random_seeds.ads
+A    l1/z2/travelers.adb
+A    l1/z3/go.mod
+A    l1/z3/z3.go
+A    l1/z4/random_seeds.adb
+A    l1/z4/random_seeds.ads
+A    l1/z4/travelers.adb
+A    l1/z5/go.mod
+A    l1/z5/z5.go
+Exported revision 14.
+ sprawozdanie $ cd l1
+ l1 $ cd z1
+ z1 $ ls
+.rw-r--r--   21 akinhet  8 Nov 21:12 go.mod
+.rw-r--r-- 3.4k akinhet  8 Nov 21:12 z1.go
+ z1 $ go run . > out1
+ z1 $ go run . > out2
+ z1 $ go run . > out3
+ z1 $ shasum out1
+c7b821f66acff185d1bc8823f04fc911a932da6b  out1
+ z1 $ shasum out2
+87441659ef723c5255a4b9a4f5945cecc8b87fc2  out2
+ z1 $ shasum out3
+817a5eaf9329afb5306f806ff13c5d1a34f3a911  out3
+ z1 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z1/out1
+
+Log message unchanged or not specified
+(a)bort, (c)ontinue, (e)dit:
+a
+ z1 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z1/out1
+Adding         out1
+Committing transaction...
+Committed revision 15.
+ z1 $ svn import out2 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z1/out2                                                                                          
+Adding         out2
+Committing transaction...
+Committed revision 16.
+ z1 $ svn import out3 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z1/out3                                                                                          
+Adding         out3
+Committing transaction...
+Committed revision 17.
+ z1 $ cd ..
+ l1 $ cd z2
+ z2 $ ls
+.rw-r--r--  493 akinhet  8 Nov 21:12 random_seeds.adb
+.rw-r--r--  278 akinhet  8 Nov 21:12 random_seeds.ads
+.rw-r--r-- 7.4k akinhet  8 Nov 21:12 travelers.adb
+ z2 $ gnatmake travelers.adb 
+gcc -c travelers.adb
+gcc -c random_seeds.adb
+gnatbind -x travelers.ali
+gnatlink travelers.ali
+ z2 $ ls
+.rw-r--r--  493 akinhet  8 Nov 21:12 random_seeds.adb
+.rw-r--r--  278 akinhet  8 Nov 21:12 random_seeds.ads
+.rw-r--r-- 2.7k akinhet  8 Nov 21:19 random_seeds.ali
+.rw-r--r-- 2.9k akinhet  8 Nov 21:19 random_seeds.o
+.rwxr-xr-x 648k akinhet  8 Nov 21:19 travelers
+.rw-r--r-- 7.4k akinhet  8 Nov 21:12 travelers.adb
+.rw-r--r--  11k akinhet  8 Nov 21:19 travelers.ali
+.rw-r--r--  34k akinhet  8 Nov 21:19 travelers.o
+ z2 $ ./travelers > out1
+ z2 $ nvim travelers.
+travelers.adb  travelers.ali  travelers.o    
+ z2 $ nvim travelers.adb 
+ z2 $ gnatmake travelers.adb                                                                                                                                            
+gcc -c travelers.adb
+gnatbind -x travelers.ali
+gnatlink travelers.ali
+ z2 $ ./travelers > out2                                                                                                                                                
+ z2 $ nvim travelers.adb                                                                                                                                             
+ z2 $ gnatmake travelers.adb                                                                                                                                            
+gcc -c travelers.adb
+gnatbind -x travelers.ali
+gnatlink travelers.ali
+ z2 $ ./travelers > out3                                                                                                                                                
+ z2 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z2/out1                                                                                          
+Adding         out1
+Committing transaction...
+Committed revision 18.
+ z2 $ svn import out2 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z2/out2                                                                                          
+Adding         out2
+Committing transaction...
+Committed revision 19.
+ z2 $ svn import out3 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z2/out3                                                                                          
+Adding         out3
+Committing transaction...
+Committed revision 20.
+ z2 $ cd ../z3
+ z3 $ go run . > out1
+ z3 $ nvim zad3.go
+ z3 $ go run . > out2
+ z3 $ nvim z3.go                                                                                                                                                        
+ z3 $ go run . > out3
+ z3 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z3/out1                                                                                          
+Adding         out1
+Committing transaction...
+Committed revision 21.
+ z3 $ svn import out2 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z3/out2                                                                                          
+Adding         out2
+Committing transaction...
+Committed revision 22.
+ z3 $ svn import out3 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z3/out3                                                                                          
+Adding         out3
+Committing transaction...
+Committed revision 23.
+ z3 $ cd ../z4
+ z4 $ ls
+.rw-r--r--  493 akinhet  8 Nov 21:12 random_seeds.adb
+.rw-r--r--  278 akinhet  8 Nov 21:12 random_seeds.ads
+.rw-r--r-- 7.2k akinhet  8 Nov 21:12 travelers.adb
+ z4 $ gnatmake travelers.adb 
+gcc -c travelers.adb
+gcc -c random_seeds.adb
+gnatbind -x travelers.ali
+gnatlink travelers.ali
+ z4 $ ./travelers > out1     
+ z4 $ ./travelers > out2
+ z4 $ ./travelers > out3
+ z4 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z4/out1                                                                                          
+Adding         out1
+Committing transaction...
+Committed revision 24.
+ z4 $ svn import out2 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z4/out2                                                                                          
+Adding         out2
+Committing transaction...
+Committed revision 25.
+ z4 $ svn import out3 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z4/out3                                                                                          
+Adding         out3
+Committing transaction...
+Committed revision 26.
+ z4 $ cd ../z5
+ z5 $ go run . > out1                                                                                                                                               
+ z5 $ go run . > out2
+ z5 $ go run . > out3
+ z5 $ svn import out1 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z5/out1                                                                                          
+Adding         out1
+Committing transaction...
+Committed revision 27.
+ z5 $ svn import out2 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z5/out2                                                                                          
+Adding         out2
+Committing transaction...
+Committed revision 28.
+ z5 $ svn import out3 https://repo.cs.pwr.edu.pl/283961-dir/mk1/sem5/l1/z5/out3                                                                                          
+Adding         out3
+Committing transaction...
+Committed revision 29.
+ z5 $ tmux capture-pane -p -S'-' -E'-' -J > sprawozdanie
+

@@ -52,5 +52,7 @@ plot!(0:40, c, label="Float64", lw=2)
 xlabel!("Numer iteracji")
 ylabel!("pₙ")
 
-display(current())
-readline()
+savefig("zad5.svg")
+
+# display(current())
+# readline()

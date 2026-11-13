@@ -1,0 +1,17 @@
+data;
+
+set Periods := 1 2 3 4;
+
+param maxProd := 100;
+param maxStorage := 70;
+param storageCost := 1500;
+param initialStorage := 15;
+
+param:
+    cost maxOvertime overtimeCost demand :=
+1   6000 60  8000  130
+2   4000 65  6000   80
+3   8000 70 10000  125
+4   9000 60 11000  195;
+
+end;

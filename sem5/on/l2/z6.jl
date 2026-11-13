@@ -33,14 +33,14 @@ for (i, (c, x0)) in enumerate(cases)
 end
 
 # Wykres dla c = -2
-p1 = plot(title="c = -2", xlabel="n", ylabel="xₙ")
+p1 = plot(xlabel="n", ylabel="xₙ")
 
 for i in 1:3
     plot!(p1, 0:40, results[i], label="x0=$(cases[i][2])")
 end
 
 # Wykres dla c = -1
-p2 = plot(title="c = -1", xlabel="n", ylabel="xₙ")
+p2 = plot(xlabel="n", ylabel="xₙ")
 
 for i in 4:7
     plot!(p2, 0:40, results[i], label="x0=$(cases[i][2])")

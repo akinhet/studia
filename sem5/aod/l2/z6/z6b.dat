@@ -1,0 +1,14 @@
+data;
+
+param m := 5;
+param n := 5;
+param k := 2;
+
+set Containers :=
+    (1,1)
+    (1,5)
+    (3,3)
+    (5,1)
+    (5,5);
+
+end;
