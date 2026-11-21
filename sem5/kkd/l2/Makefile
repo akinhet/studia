@@ -4,10 +4,10 @@ DEPS = htree.h
 
 all: encode decode
 
-encode: $(DEPS)
-	$(CC) -o $@ $@.c $(CFLAGS)
+encode: encode.c $(DEPS)
+	$(CC) -o $@ $@.c $(CFLAGS) -lm
 
-decode: $(DEPS)
+decode: decode.c $(DEPS)
 	$(CC) -o $@ $@.c $(CFLAGS)
 
 clean:
